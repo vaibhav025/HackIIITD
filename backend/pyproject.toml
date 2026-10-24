@@ -1,0 +1,9 @@
+[project]
+name = "shelfsense-backend"
+version = "0.1.0"
+description = "ShelfSense API: price and shelf-visibility tracking for quick-commerce sellers"
+requires-python = ">=3.11"
+
+[tool.ruff.lint]
+# FastAPI's Depends declarations are intentionally expressed as defaults.
+ignore = ["B008"]
