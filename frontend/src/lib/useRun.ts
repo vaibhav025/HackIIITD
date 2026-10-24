@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { api, ApiError, errorMessage, streamUrl } from "./api";
 import { mochiEmit } from "./mochi-bus";
+import { MOCK_MODE, mockRunEvents } from "./mock";
 import type {
   AgentJob,
   AgentStep,
@@ -503,7 +504,21 @@ export function useRun(productId: string | null, onUpdate?: () => void) {
         s.pollTimer = setTimeout(poll, 0);
       };
 
+      // Demo mode: replay the mock run's event stream on timers instead of opening an EventSource.
+      const openMock = () => {
+        dispatch({ kind: "connection", connection: "live" });
+        for (const { at, event } of mockRunEvents(runId)) {
+          later(() => {
+            s.lastActivity = Date.now();
+            dispatch({ kind: "event", event, seq: null });
+            if (event.type === "result") refreshSoon();
+            if (event.type === "run_done") finish();
+          }, Math.max(0, at - Date.now()));
+        }
+      };
+
       const open = async () => {
+        if (MOCK_MODE) return openMock();
         let url: string;
         try {
           url = await streamUrl(runId, { lastEventId: runRef.current?.lastSeq ? String(runRef.current.lastSeq) : null });

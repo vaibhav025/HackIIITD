@@ -1,0 +1,697 @@
+» return (
+<div 8:1740 'product'> flex-col items-start pl-[260px]
+  <div 8:1741 'Main'> bg-[#f4f1de] flex-col items-start min-h-[800px] pb-[40px] pt-[72px] px-[40px]
+    <div 8:1742 'Container'> flex-col gap-[32px] items-start max-w-[1340px] p-[40px]
+      <div 8:1743 'Header - PAGE HEADER'> items-end justify-between
+        <div 8:1744 'Container'> flex-col gap-[8px] items-start
+          <div 8:1745 'Heading 1'> flex-col items-start
+            <div 8:1746 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[56px] tracking-[-1.4px]
+              <p  ''> leading-[60px]
+                » Products
+          <div 8:1747 'Container'> flex-col items-start
+            <div 8:1748 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[16px]
+              <p  ''> leading-[22px]
+                » 8 products tracked across 5 platforms.
+        <div 8:1749 'Container'> gap-[14.963px] items-center
+          <div 8:1750 'Rotated Attention Sticker:css-transform'> flex-col h-[50.5px] items-start justify-center pb-[1.686px] pt-[1.68px]
+            <div 8:1751 ''> h-[47.633px] items-center justify-center w-[170.123px]
+              <div  ''> -rotate-4
+                <div  'Rotated Attention Sticker'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[3px_3px_0px_#0d1b2a] flex-col items-start px-[16px] py-[8px] rounded-[8px]
+                  <div 8:1752 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[13px] tracking-[0.65px] uppercase
+                    <p  ''> leading-[19.5px]
+                      » 3 NEED ATTENTION
+          <div 8:1753 'Button - Add Product CTA'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] gap-[8px] items-center px-[26px] py-[14px] rounded-[12px]
+            <div 8:1754 'Container'> size-[13.083px]
+              <img  ''> absolute inset-0 max-w-none img=imgContainer
+            <div 8:1756 'Container'> h-[22.5px] w-[89.91px]
+                <div 8:1757 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#f4f1de] text-[15px] text-center top-[10.5px]
+                  <p  ''> leading-[22.5px]
+                    » Add product
+      <div 8:1758 'Section - SUMMARY ROW'> gap-[24px] items-start justify-center
+        <div 8:1759 'Card 1: Healthy'> bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[6px_6px_0px_#0d1b2a] h-[200px] min-w-px rounded-[20px]
+          <div 8:1760 'Container'> absolute flex-col items-start left-[24px] top-[24px]
+            <div 8:1761 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+              <p  ''> leading-[21px]
+                » HEALTHY
+          <div 8:1762 'Container'> absolute flex-col items-start left-[24px] top-[61.25px]
+            <div 8:1763 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[72px]
+              <p  ''> leading-[72px]
+                » 5
+          <div 8:1764 'Container'> absolute flex-col items-start left-[24px] top-[148.5px]
+            <div 8:1765 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[15px]
+              <p  ''> leading-[22.5px]
+                » Stock and price on track
+        <div 8:1766 'Card 2: Need Attention'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[6px_6px_0px_#0d1b2a] h-[200px] min-w-px rounded-[20px]
+          <div 8:1767 'Container'> absolute flex-col items-start left-[24px] top-[24px]
+            <div 8:1768 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+              <p  ''> leading-[21px]
+                » NEED ATTENTION
+          <div 8:1769 'Container'> absolute flex-col items-start left-[24px] top-[61.25px]
+            <div 8:1770 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[72px]
+              <p  ''> leading-[72px]
+                » 3
+          <div 8:1771 'Container'> absolute flex-col items-start left-[24px] top-[148.5px]
+            <div 8:1772 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[15px]
+              <p  ''> leading-[22.5px]
+                » Out of stock or price gap
+        <div 8:1773 'Card 3: Tracked Pincodes'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[6px_6px_0px_#0d1b2a] h-[200px] min-w-px rounded-[20px]
+          <div 8:1774 'Container'> absolute flex-col items-start left-[24px] top-[24px]
+            <div 8:1775 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[14px] text-[rgba(244,241,222,0.9)] tracking-[0.7px] uppercase
+              <p  ''> leading-[21px]
+                » TRACKED PINCODES
+          <div 8:1776 'Container'> absolute flex-col items-start left-[24px] top-[61.25px]
+            <div 8:1777 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#f4f1de] text-[72px]
+              <p  ''> leading-[72px]
+                » 64
+          <div 8:1778 'Container'> absolute flex-col items-start left-[24px] top-[148.5px]
+            <div 8:1779 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[15px] text-[rgba(244,241,222,0.9)]
+              <p  ''> leading-[22.5px]
+                » Of 100 on your plan
+      <div 8:1780 'Section - TOOLBAR'> items-center justify-between py-[4px]
+        <div 8:1781 'Filter Chips'> gap-[12px] items-center
+          <div 8:1782 'Button'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col items-center justify-center px-[23.89px] py-[10px] rounded-[12px]
+            <div 8:1783 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[14px] text-center
+              <p  ''> leading-[21px]
+                » All
+              <p  ''> leading-[21px]
+                » 8
+          <div 8:1784 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col items-center justify-center pl-[22.78px] pr-[22.79px] py-[10px] rounded-[12px]
+            <div 8:1785 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+              <p  ''> leading-[21px]
+                » Needs attention
+              <p  ''> leading-[21px]
+                » 3
+          <div 8:1786 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col items-center justify-center pl-[23.29px] pr-[23.28px] py-[10px] rounded-[12px]
+            <div 8:1787 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+              <p  ''> leading-[21px]
+                » Healthy
+              <p  ''> leading-[21px]
+                » 5
+          <div 8:1788 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col items-center justify-center pl-[23.62px] pr-[23.63px] py-[10px] rounded-[12px]
+            <div 8:1789 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+              <p  ''> leading-[21px]
+                » Paused
+              <p  ''> leading-[21px]
+                » 0
+        <div 8:1790 'Controls Right'> gap-[16px] items-center
+          <div 8:1791 'Button - Sort Dropdown button'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[3px_3px_0px_#0d1b2a] gap-[8px] items-center px-[18px] py-[10px] rounded-[12px]
+            <div 8:1792 'Container'> 
+              <div  ''> flex-col items-center px-[12.45px]
+                <div 8:1793 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+                  <p  ''> leading-[21px]
+                    » Sort: Needs attention
+                  <p  ''> leading-[21px]
+                    » first
+            <div 8:1794 'Container'> h-[5.55px] w-[9px]
+              <img  ''> absolute inset-0 max-w-none img=imgContainer1
+          <div 8:1796 'View Toggle Buttons'> items-center
+            <div 8:1797 'Button'> bg-[#415a77] border-2 border-[#0d1b2a] gap-[6px] items-center px-[16px] py-[10px] rounded-bl-[12px] rounded-tl-[12px]
+              <div 8:1798 'Container'> h-[12px] w-[15px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer2
+              <div 8:1800 'Container'> 
+                <div  ''> flex-col items-center
+                  <div 8:1801 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[14px] text-center
+                    <p  ''> leading-[21px]
+                      » List
+            <div 8:1802 'Button'> bg-[#f4f1de] border-[#0d1b2a] border-b-2 border-r-2 border-t-2 gap-[6px] items-center pl-[14px] pr-[16px] py-[10px] rounded-br-[12px] rounded-tr-[12px]
+              <div 8:1803 'Container'> size-[13.5px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer3
+              <div 8:1805 'Container'> 
+                <div  ''> flex-col items-center
+                  <div 8:1806 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+                    <p  ''> leading-[21px]
+                      » Grid
+      <a 8:1807 'PRODUCT TABLE CARD'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col items-start p-[2px] rounded-[20px] shadow-[6px_6px_0px_0px_#0d1b2a] w-[862px]
+        <div 8:1808 'Table'> w-[915.44px]
+          <div  ''> flex-col items-start
+            <div 8:1809 'Header → Row'> bg-[#d4c4a8] border-[#0d1b2a] border-b-2 items-start justify-center pb-[2px] pr-[80px]
+              <div 8:1810 'Cell'> w-[203.31px]
+                <div  ''> flex-col items-start pb-[38px] pt-[37px] px-[24px]
+                  <div 8:1811 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » PRODUCT
+              <div 8:1812 'Cell'> w-[158px]
+                <div  ''> flex-col items-start pb-[38px] pt-[37px] px-[16px]
+                  <div 8:1813 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » STOCK
+              <div 8:1814 'Cell'> w-[100.02px]
+                <div  ''> flex-col items-start pb-[17px] pt-[16px] px-[16px]
+                  <div 8:1815 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » PRICE
+                    <p  ''> leading-[21px]
+                      » VS
+                    <p  ''> leading-[21px]
+                      » RIVALS
+              <div 8:1816 'Cell'> w-[142.23px]
+                <div  ''> flex-col items-start pb-[38px] pt-[37px] px-[16px]
+                  <div 8:1817 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » STATUS
+              <div 8:1818 'Cell'> w-[105.25px]
+                <div  ''> flex-col items-start pb-[27.5px] pt-[26.5px] px-[16px]
+                  <div 8:1819 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » LAST
+                    <p  ''> leading-[21px]
+                      » CHECKED
+              <div 8:1820 'Cell'> w-[126.63px]
+                <div  ''> flex-col items-start pb-[38px] pt-[37px] px-[16px]
+                  <div 8:1821 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-left tracking-[0.7px] uppercase
+                    <p  ''> leading-[21px]
+                      » TELEGRAM
+            <div 8:1822 'Body'> flex-col items-start
+              <div 8:1823 'Row - ROW 1'> items-center justify-center pl-[24px] pr-[96px]
+                <div 8:1824 'Data'> gap-[14px] items-center w-[155.31px]
+                  <div 8:1825 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                    <div 8:1826 'Container'> h-[20px] w-[16px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer4
+                  <div 8:1828 'Container'> h-[154.5px] w-[93.31px]
+                    <div 8:1829 'Container'> absolute flex-col items-start left-0 pb-[0.625px] top-[-0.63px]
+                      <div 8:1830 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                        <p  ''> leading-[21.25px]
+                          » Amul
+                        <p  ''> leading-[21.25px]
+                          » Taaza
+                        <p  ''> leading-[21.25px]
+                          » Toned Milk
+                        <p  ''> leading-[21.25px]
+                          » 500 ml
+                    <div 8:1831 'Margin'> absolute flex-col items-start left-0 top-[85px]
+                      <div 8:1832 'Container'> flex-col items-start
+                        <div 8:1833 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                          <p  ''> leading-[22.5px]
+                            » Blinkit ·
+                          <p  ''> leading-[22.5px]
+                            » Zepto ·
+                          <p  ''> leading-[22.5px]
+                            » Amazon
+                <div 8:1834 'Data'> flex-col gap-[6px] items-start pl-[40px] w-[166px]
+                  <div 8:1835 'Container'> flex-col items-start
+                    <div 8:1836 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 11 of 15 pincodes
+                  <div 8:1837 'Container'> gap-[6px] h-[16px] items-center
+                    <div 8:1838 'Background+Border'> h-[19px] w-[16px]
+                      <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                    <div 8:1840 'Background+Border'> h-[19px] w-[16px]
+                      <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                    <div 8:1842 'Background+Border'> h-[19px] w-[16px]
+                      <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                    <div 8:1844 'Background+Border'> h-[19px] w-[16px]
+                      <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                    <div 8:1846 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                    <div 8:1847 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] h-[19px] items-center justify-center p-[2px] rounded-[9999px] w-[16px]
+                      <div 8:1848 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[10px] text-center
+                        <p  ''> leading-[15px]
+                          » ₹
+                <div 8:1849 'Data'> flex-col items-start pb-[69.75px] pl-[32px] pr-[16px] pt-[70.25px] w-[116.02px]
+                  <div 8:1850 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                    <p  ''> leading-[24px]
+                      » ₹4
+                    <p  ''> leading-[24px]
+                      » below
+                <div 8:1851 'Data'> flex-col items-start pb-[66.75px] pt-[67.25px] px-[16px] w-[142.23px]
+                  <div 8:1852 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                    <div 8:1853 'Container'> h-[12.667px] w-[14.667px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer5
+                    <div 8:1855 'Container'> 
+                      <div  ''> flex-col items-start
+                        <div 8:1856 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                          <p  ''> leading-[21px]
+                            » Needs
+                          <p  ''> leading-[21px]
+                            » attention
+                <div 8:1857 'Data'> flex-col items-start pb-[83px] pt-[82px] px-[16px] w-[105.25px]
+                  <div 8:1858 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                    <p  ''> leading-[22.5px]
+                      » 1h ago
+                <div 8:1859 'Data'> gap-[6px] items-center pl-[16px] w-[110.63px]
+                  <div 8:1860 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] rounded-[9999px] size-[10px]
+                  <div 8:1861 'Container'> h-[22.5px] w-[78.63px]
+                    <div 8:1862 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#0d1b2a] text-[15px] text-left top-[10.5px]
+                      <p  ''> leading-[22.5px]
+                        » Connected
+              <div 8:1863 'Row - ROW 2'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:1864 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:1865 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:1866 'Container'> h-[14px] w-[22px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer6
+                    <div 8:1868 'Container'> h-[132px] w-[93.31px]
+                      <div 8:1869 'Container'> absolute flex-col items-start left-0 pb-[0.625px] top-[-0.63px]
+                        <div 8:1870 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Britannia
+                          <p  ''> leading-[21.25px]
+                            » Whole
+                          <p  ''> leading-[21.25px]
+                            » Wheat
+                          <p  ''> leading-[21.25px]
+                            » Bread
+                      <div 8:1871 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[85px]
+                        <div 8:1872 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:1873 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Blinkit ·
+                            <p  ''> leading-[22.5px]
+                              » Instamart
+                <div 8:1874 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:1875 'Container'> flex-col items-start
+                      <div 8:1876 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 12 of 12 pincodes
+                    <div 8:1877 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:1878 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1880 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1882 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1884 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1886 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1888 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                <div 8:1890 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pl-[32px] pr-[16px] py-[70.5px]
+                    <div 8:1891 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » Matched
+                <div 8:1892 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start px-[16px] py-[66px]
+                    <div 8:1893 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:1894 'Container'> size-[13.333px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer7
+                      <div 8:1896 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:1897 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Healthy
+                <div 8:1898 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[71.75px] pt-[70.25px] px-[16px]
+                    <div 8:1899 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 45m ago
+                <div 8:1900 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:1901 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] rounded-[9999px] size-[10px]
+                    <div 8:1902 'Container'> h-[22.5px] w-[78.63px]
+                      <div 8:1903 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#0d1b2a] text-[15px] text-left top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Connected
+              <div 8:1904 'Row - ROW 3'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:1905 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:1906 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:1907 'Container'> size-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer8
+                    <div 8:1909 'Container'> h-[112px] w-[93.31px]
+                      <div 8:1910 'Container'> absolute flex-col items-start left-0 top-[-0.88px]
+                        <div 8:1911 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Aashirvaad
+                          <p  ''> leading-[21.25px]
+                            » Atta 5 kg
+                      <div 8:1912 'Margin'> absolute flex-col items-start left-0 top-[42.5px]
+                        <div 8:1913 'Container'> flex-col items-start
+                          <div 8:1914 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Blinkit ·
+                            <p  ''> leading-[22.5px]
+                              » Zepto ·
+                            <p  ''> leading-[22.5px]
+                              » Flipkart
+                <div 8:1915 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:1916 'Container'> flex-col items-start
+                      <div 8:1917 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 8 of 12 pincodes
+                    <div 8:1918 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:1919 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1921 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1923 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1925 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                      <div 8:1926 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                      <div 8:1927 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] h-[19px] items-center justify-center p-[2px] rounded-[9999px] w-[16px]
+                        <div 8:1928 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[10px] text-center
+                          <p  ''> leading-[15px]
+                            » ₹
+                <div 8:1929 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pl-[32px] pr-[16px] py-[48.5px]
+                    <div 8:1930 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » ₹14
+                      <p  ''> leading-[24px]
+                        » above
+                <div 8:1931 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start px-[16px] py-[45.5px]
+                    <div 8:1932 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:1933 'Container'> h-[12.667px] w-[14.667px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer5
+                      <div 8:1935 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:1936 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Needs
+                            <p  ''> leading-[21px]
+                              » attention
+                <div 8:1937 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[61.75px] pt-[60.25px] px-[16px]
+                    <div 8:1938 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 1h ago
+                <div 8:1939 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:1940 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] rounded-[9999px] size-[10px]
+                    <div 8:1941 'Container'> h-[22.5px] w-[78.63px]
+                      <div 8:1942 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#0d1b2a] text-[15px] text-left top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Connected
+              <div 8:1943 'Row - ROW 4'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:1944 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:1945 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:1946 'Container'> h-[20px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer9
+                    <div 8:1948 'Container'> h-[89.5px] w-[93.31px]
+                      <div 8:1949 'Container'> absolute flex-col items-start left-0 top-[-0.88px]
+                        <div 8:1950 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Tata Salt 1
+                          <p  ''> leading-[21.25px]
+                            » kg
+                      <div 8:1951 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[42.5px]
+                        <div 8:1952 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:1953 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Zepto ·
+                            <p  ''> leading-[22.5px]
+                              » Amazon
+                <div 8:1954 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:1955 'Container'> flex-col items-start
+                      <div 8:1956 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 12 of 12 pincodes
+                    <div 8:1957 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:1958 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1960 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1962 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1964 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1966 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:1968 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                <div 8:1970 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pl-[32px] pr-[16px] py-[49.25px]
+                    <div 8:1971 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » ₹1 below
+                <div 8:1972 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start px-[16px] py-[44.75px]
+                    <div 8:1973 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:1974 'Container'> size-[13.333px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer7
+                      <div 8:1976 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:1977 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Healthy
+                <div 8:1978 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[50.5px] pt-[49px] px-[16px]
+                    <div 8:1979 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 3h ago
+                <div 8:1980 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:1981 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] rounded-[9999px] size-[10px]
+                    <div 8:1982 'Container'> h-[22.5px] w-[78.63px]
+                      <div 8:1983 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#0d1b2a] text-[15px] text-left top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Connected
+              <div 8:1984 'Row - ROW 5'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:1985 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:1986 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:1987 'Container'> size-[20px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer10
+                    <div 8:1989 'Container'> h-[132px] w-[93.31px]
+                      <div 8:1990 'Container'> absolute flex-col items-start left-0 pb-[0.625px] top-[-0.63px]
+                        <div 8:1991 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Maggi
+                          <p  ''> leading-[21.25px]
+                            » Masala
+                          <p  ''> leading-[21.25px]
+                            » Noodles 12
+                          <p  ''> leading-[21.25px]
+                            » pack
+                      <div 8:1992 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[85px]
+                        <div 8:1993 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:1994 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Blinkit ·
+                            <p  ''> leading-[22.5px]
+                              » Instamart
+                <div 8:1995 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:1996 'Container'> flex-col items-start
+                      <div 8:1997 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 9 of 12 pincodes
+                    <div 8:1998 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:1999 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2001 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2003 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2005 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                      <div 8:2006 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                      <div 8:2007 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] h-[19px] items-center justify-center p-[2px] rounded-[9999px] w-[16px]
+                        <div 8:2008 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[10px] text-center
+                          <p  ''> leading-[15px]
+                            » ₹
+                <div 8:2009 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pl-[32px] pr-[16px] py-[58.5px]
+                    <div 8:2010 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » ₹6
+                      <p  ''> leading-[24px]
+                        » below
+                <div 8:2011 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start px-[16px] py-[55.5px]
+                    <div 8:2012 'Background+Border'> bg-[#d4c4a8] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:2013 'Container'> h-[12.667px] w-[14.667px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer5
+                      <div 8:2015 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:2016 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Needs
+                            <p  ''> leading-[21px]
+                              » attention
+                <div 8:2017 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[71.75px] pt-[70.25px] px-[16px]
+                    <div 8:2018 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 15m ago
+                <div 8:2019 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:2020 'Overlay+Border'> bg-[rgba(13,27,42,0.3)] border border-[#0d1b2a] h-[10px] rounded-[9999px] w-[8.14px]
+                    <div 8:2021 'Container'> h-[45px] w-[80.48px]
+                      <div 8:2022 ''> absolute flex-col font-['Inter:Regular'] font-normal justify-center left-0 text-[15px] text-[rgba(13,27,42,0.6)] text-left top-[21.75px]
+                        <p  ''> leading-[22.5px]
+                          » Not
+                        <p  ''> leading-[22.5px]
+                          » connected
+              <div 8:2023 'Row - ROW 6'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:2024 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:2025 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:2026 'Container'> h-[20.025px] w-[20px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer11
+                    <div 8:2028 'Container'> h-[89.5px] w-[93.31px]
+                      <div 8:2029 'Container'> absolute flex-col items-start left-0 top-[-0.88px]
+                        <div 8:2030 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Parle-G
+                          <p  ''> leading-[21.25px]
+                            » Gold 800 g
+                      <div 8:2031 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[42.5px]
+                        <div 8:2032 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:2033 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Blinkit ·
+                            <p  ''> leading-[22.5px]
+                              » Zepto
+                <div 8:2034 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:2035 'Container'> flex-col items-start
+                      <div 8:2036 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 10 of 12 pincodes
+                    <div 8:2037 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:2038 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2040 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2042 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2044 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2046 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2048 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed rounded-[9999px] size-[16px]
+                <div 8:2049 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pl-[32px] pr-[16px] py-[37.25px]
+                    <div 8:2050 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » ₹2
+                      <p  ''> leading-[24px]
+                        » below
+                <div 8:2051 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start px-[16px] py-[44.75px]
+                    <div 8:2052 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:2053 'Container'> size-[13.333px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer7
+                      <div 8:2055 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:2056 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Healthy
+                <div 8:2057 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[50.5px] pt-[49px] px-[16px]
+                    <div 8:2058 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 58m ago
+                <div 8:2059 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:2060 'Overlay+Border'> bg-[rgba(13,27,42,0.3)] border border-[#0d1b2a] h-[10px] rounded-[9999px] w-[8.14px]
+                    <div 8:2061 'Container'> h-[45px] w-[80.48px]
+                      <div 8:2062 ''> absolute flex-col font-['Inter:Regular'] font-normal justify-center left-0 text-[15px] text-[rgba(13,27,42,0.6)] text-left top-[21.75px]
+                        <p  ''> leading-[22.5px]
+                          » Not
+                        <p  ''> leading-[22.5px]
+                          » connected
+              <div 8:2063 'Row - ROW 7'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:2064 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:2065 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:2066 'Container'> size-[18px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer12
+                    <div 8:2068 'Container'> h-[110.75px] w-[93.31px]
+                      <div 8:2069 'Container'> absolute flex-col items-start left-0 top-[-0.75px]
+                        <div 8:2070 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Fortune
+                          <p  ''> leading-[21.25px]
+                            » Sunflower
+                          <p  ''> leading-[21.25px]
+                            » Oil 1 L
+                      <div 8:2071 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[63.75px]
+                        <div 8:2072 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:2073 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Blinkit ·
+                            <p  ''> leading-[22.5px]
+                              » Amazon
+                <div 8:2074 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:2075 'Container'> flex-col items-start
+                      <div 8:2076 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 12 of 12 pincodes
+                    <div 8:2077 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:2078 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2080 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2082 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2084 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2086 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2088 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                <div 8:2090 'Data'> w-[116.02px]
+                  <div  ''> flex-col items-start pb-[47.87px] pl-[32px] pr-[16px] pt-[47.88px]
+                    <div 8:2091 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[16px] text-left
+                      <p  ''> leading-[24px]
+                        » ₹3
+                      <p  ''> leading-[24px]
+                        » below
+                <div 8:2092 'Data'> w-[142.23px]
+                  <div  ''> flex-col items-start pb-[55.37px] pt-[55.38px] px-[16px]
+                    <div 8:2093 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] gap-[6px] items-center px-[14px] py-[6px] rounded-[9999px]
+                      <div 8:2094 'Container'> size-[13.333px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer7
+                      <div 8:2096 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 8:2097 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-left
+                            <p  ''> leading-[21px]
+                              » Healthy
+                <div 8:2098 'Data'> w-[105.25px]
+                  <div  ''> flex-col items-start pb-[61.12px] pt-[59.63px] px-[16px]
+                    <div 8:2099 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#0d1b2a] text-[15px] text-left
+                      <p  ''> leading-[22.5px]
+                        » 2h ago
+                <div 8:2100 'Data'> w-[110.63px]
+                  <div  ''> gap-[6px] items-center pl-[16px]
+                    <div 8:2101 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] rounded-[9999px] size-[10px]
+                    <div 8:2102 'Container'> h-[22.5px] w-[78.63px]
+                      <div 8:2103 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#0d1b2a] text-[15px] text-left top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Connected
+              <div 8:2104 'Row - ROW 8'> border-[rgba(13,27,42,0.2)] border-t items-center justify-center pl-[24px] pr-[96px]
+                <div 8:2105 'Data'> w-[155.31px]
+                  <div  ''> gap-[14px] items-center
+                    <div 8:2106 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[48px]
+                      <div 8:2107 'Container'> h-[20px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer13
+                    <div 8:2109 'Container'> h-[89.5px] w-[93.31px]
+                      <div 8:2110 'Container'> absolute flex-col items-start left-0 top-[-0.88px]
+                        <div 8:2111 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[17px] text-left
+                          <p  ''> leading-[21.25px]
+                            » Surf Excel
+                          <p  ''> leading-[21.25px]
+                            » Matic 2 kg
+                      <div 8:2112 'Margin'> absolute flex-col items-start left-0 pt-[1.25px] top-[42.5px]
+                        <div 8:2113 'Container'> flex-col items-start pb-[0.75px]
+                          <div 8:2114 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[15px] text-[rgba(13,27,42,0.8)] text-left
+                            <p  ''> leading-[22.5px]
+                              » Amazon ·
+                            <p  ''> leading-[22.5px]
+                              » Flipkart
+                <div 8:2115 'Data'> w-[166px]
+                  <div  ''> flex-col gap-[6px] items-start pl-[40px]
+                    <div 8:2116 'Container'> flex-col items-start
+                      <div 8:2117 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-left
+                        <p  ''> leading-[22.5px]
+                          » 12 of 12 pincodes
+                    <div 8:2118 'Container'> gap-[6px] h-[16px] items-center
+                      <div 8:2119 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2121 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2123 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2125 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2127 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder
+                      <div 8:2129 'Background+Border'> h-[19px] w-[16px]
+                        <img  ''> absolute inset-0 max-w-none img=imgBackgroundBorder

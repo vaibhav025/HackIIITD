@@ -1,0 +1,518 @@
+» return (
+<div 3:2 'heatmaps'> flex-col items-start
+  <div 3:3 'Container'> h-[1308.3px] items-start min-h-[800px]
+    <div 3:4 'Aside'> bg-[#0d1b2a] border-[#0d1b2a] border-r-2 flex-col gap-[0.003px] items-start pr-[2px] w-[260px]
+      <div 3:5 'Container'> 
+        <div  ''> flex-col items-start
+          <div 3:6 'HorizontalBorder'> border-[#0d1b2a] border-b-2 h-[72px] items-center pb-[2px] px-[24px]
+            <div 3:7 'Container'> 
+              <div  ''> gap-[12px] items-center
+                <div 3:8 'Background+Border+Shadow'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[3px_3px_0px_#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[40px]
+                  <div 3:9 'Container'> size-[18.058px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer
+                <div 3:11 'Container'> flex-col items-start
+                  <div 3:12 'Container'> flex-col items-start
+                    <div 3:13 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#f4f1de] text-[22px] tracking-[-0.55px]
+                      <p  ''> leading-[22px]
+                        » ShelfSense
+                  <div 3:14 'Margin'> flex-col items-start pt-[4px]
+                    <div 3:15 'Container'> flex-col items-start
+                      <div 3:16 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#d4c4a8] text-[11px] tracking-[1.1px] uppercase
+                        <p  ''> leading-[11px]
+                          » INTELLIGENCE
+          <div 3:17 'Nav'> flex-col gap-[6px] items-start pt-[24px] px-[16px]
+            <a 3:18 'Link'> gap-[12px] items-center px-[16px] py-[10px] rounded-[12px]
+              <div 3:19 'Container'> size-[15px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer1
+              <div 3:21 'Container'> h-[22.5px] w-[78.23px]
+                <div 3:22 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#f4f1de] text-[15px] text-left top-[10.5px]
+                  <p  ''> leading-[22.5px]
+                    » Dashboard
+            <a 3:23 'Link'> gap-[12px] items-center px-[16px] py-[10px] rounded-[12px]
+              <div 3:24 'Container'> size-[16.667px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer2
+              <div 3:26 'Container'> h-[22.5px] w-[64.2px]
+                <div 3:27 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#f4f1de] text-[15px] text-left top-[10.5px]
+                  <p  ''> leading-[22.5px]
+                    » Products
+            <div 3:28 'Link'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] gap-[12px] items-center px-[18px] py-[12px] rounded-[12px]
+              <div 3:29 'Container'> h-[15.833px] w-[13.333px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer3
+              <div 3:31 'Container'> h-[22.5px] w-[73.83px]
+                  <div 3:32 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-0 text-[#0d1b2a] text-[15px] top-[10.5px]
+                    <p  ''> leading-[22.5px]
+                      » Heatmaps
+            <a 3:33 'Link'> gap-[12px] items-center px-[16px] py-[10px] rounded-[12px]
+              <div 3:34 'Container'> size-[15px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer4
+              <div 3:36 'Container'> h-[22.5px] w-[85.3px]
+                <div 3:37 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#f4f1de] text-[15px] text-left top-[10.5px]
+                  <p  ''> leading-[22.5px]
+                    » Help Centre
+            <a 3:38 'Link'> gap-[12px] items-center px-[16px] py-[10px] rounded-[12px]
+              <div 3:39 'Container'> h-[16.667px] w-[16.75px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer5
+              <div 3:41 'Container'> h-[22.5px] w-[58.84px]
+                <div 3:42 ''> absolute flex-col font-['Inter:Medium'] font-medium justify-center left-0 text-[#f4f1de] text-[15px] text-left top-[10.5px]
+                  <p  ''> leading-[22.5px]
+                    » Settings
+      <div 3:43 'Margin'> min-h-[96px]
+        <div  ''> flex-col items-start justify-end min-h-[inherit] pt-[875.797px]
+          <div 3:44 'HorizontalBorder'> border-[rgba(255,255,255,0.1)] border-t-2 flex-col items-start pb-[16px] pt-[18px] px-[16px]
+            <div 3:45 'Overlay+Border'> bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[12px]
+              <div  ''> items-center justify-between p-[13px]
+                <div 3:46 'Container'> 
+                  <div  ''> gap-[12px] items-center
+                    <div 3:47 'Background'> bg-[#d4c4a8] items-center justify-center pb-[8.5px] pt-[7.5px] rounded-[9999px] size-[36px]
+                      <div 3:48 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] text-center
+                        <p  ''> leading-[20px]
+                          » RS
+                    <div 3:49 'Container'> flex-col items-start
+                      <div 3:50 'Container'> flex-col items-start
+                        <div 3:51 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#f4f1de] text-[14px]
+                          <p  ''> leading-[17.5px]
+                            » Riya Sharma
+                <div 3:52 'Background'> bg-[#778d7a] rounded-[9999px]
+                  <div  ''> flex-col items-start px-[10px] py-[2px]
+                    <div 3:53 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#f4f1de] text-[12px]
+                      <p  ''> leading-[18px]
+                        » Pro
+    <div 3:54 'Container'> flex-col items-start min-w-px
+      <div 3:55 'Header'> bg-[#f4f1de] border-[#0d1b2a] border-b-2 gap-[24px] h-[72px] items-center pb-[2px] px-[40px]
+        <div 3:56 'Container'> 
+          <div  ''> gap-[8px] items-center
+            <div 3:57 'Container'> h-[22.5px] w-[65.14px]
+              <div 3:58 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-0 text-[#0d1b2a] text-[15px] top-[10.5px]
+                <p  ''> leading-[22.5px]
+                  » Products
+            <div 3:59 'Container'> h-[22.5px] w-[5.69px]
+              <div 3:60 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-0 text-[15px] text-[rgba(13,27,42,0.4)] top-[10.5px]
+                <p  ''> leading-[22.5px]
+                  » /
+            <div 3:61 'Container'> h-[22.5px] w-[138.41px]
+              <div 3:62 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-0 text-[#0d1b2a] text-[15px] top-[10.5px]
+                <p  ''> leading-[22.5px]
+                  » Amul Taaza 500 ml
+            <div 3:63 'Container'> h-[22.5px] w-[5.69px]
+              <div 3:64 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-0 text-[15px] text-[rgba(13,27,42,0.4)] top-[10.5px]
+                <p  ''> leading-[22.5px]
+                  » /
+            <div 3:65 'Container'> h-[22.5px] w-[66.34px]
+              <div 3:66 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-0 text-[#0d1b2a] text-[15px] top-[10.5px]
+                <p  ''> leading-[22.5px]
+                  » Heatmap
+        <div 3:67 'Container'> max-w-[448px] min-w-px
+          <div  ''> flex-col items-start max-w-[inherit]
+            <div 3:68 'Container'> items-center
+              <div 3:69 'Input'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col h-[44px] items-start min-w-px pl-[46px] pr-[18px] py-[13.5px] rounded-[12px]
+                <div 3:70 'Container'> 
+                  <div  ''> flex-col items-start rounded-[inherit]
+                    <div 3:71 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[14px] text-[rgba(13,27,42,0.6)]
+                      <p  ''> leading-[normal]
+                        » Search products or pincodes
+              <div 3:72 'Icon'> absolute left-[16.5px] size-[15px] top-[14.5px]
+                <img  ''> absolute inset-0 max-w-none img=imgIcon
+        <div 3:73 'Container'> 
+          <div  ''> gap-[16px] items-center
+            <div 3:74 'Background+Border+Shadow'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] gap-[6px] items-center px-[16px] py-[8px] rounded-[12px]
+              <div 3:75 'Container'> h-[12px] w-[14.25px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer6
+              <div 3:77 'Container'> 
+                <div  ''> flex-col items-start
+                  <div 3:78 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px]
+                    <p  ''> leading-[21px]
+                      » Telegram 5/8
+            <div 3:79 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center p-[2px] rounded-[12px] size-[40px]
+              <div 3:80 'Container'> h-[16.667px] w-[13.333px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer7
+            <div 3:82 'Background+Border+Shadow'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center p-[2px] rounded-[9999px] size-[36px]
+              <div 3:83 'Container'> size-[12px]
+                <img  ''> absolute inset-0 max-w-none img=imgContainer8
+      <div 3:85 'Main'> bg-[#f4f1de] flex-col items-start min-h-px
+        <div 3:86 'Container'> flex-col items-start max-w-[1100px] p-[40px]
+          <div 3:87 '2) Page header with Fraunces 48px title, Re-check button, tabs:margin'> flex-col items-start pb-[24px]
+            <div 3:88 '2) Page header with Fraunces 48px title, Re-check button, tabs'> items-start justify-between
+              <div 3:89 'Container'> h-[103.8px] w-[662.66px]
+                <div 3:90 'Heading 1'> absolute flex-col items-start left-0 pb-[0.8px] top-[-1px]
+                  <div 3:91 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[48px] tracking-[-1.2px]
+                    <p  ''> leading-[52.8px]
+                      » Amul Taaza Toned Milk 500 ml
+                <div 3:92 'Nav - Product Sections'> absolute gap-[32px] items-center left-0 pt-[4px] top-[64.8px]
+                  <div 3:93 'Button'> flex-col items-center justify-center py-[4px]
+                    <div 3:94 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[16px] text-center
+                      <p  ''> leading-[24px]
+                        » Overview
+                  <div 3:95 'Button'> border-[#415a77] border-b-3 flex-col items-center justify-center pb-[7px] pt-[4px]
+                    <div 3:96 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#415a77] text-[16px] text-center
+                      <p  ''> leading-[24px]
+                        » Heatmap
+                  <div 3:97 'Button'> flex-col items-center justify-center py-[4px]
+                    <div 3:98 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[16px] text-center
+                      <p  ''> leading-[24px]
+                        » Telegram
+                  <div 3:99 'Button'> flex-col items-center justify-center py-[4px]
+                    <div 3:100 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[16px] text-center
+                      <p  ''> leading-[24px]
+                        » Settings
+              <div 3:101 'Button'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] gap-[8px] h-[48px] items-center px-[26px] py-[2px] rounded-[12px]
+                <div 3:102 'Container'> size-[13.333px]
+                  <img  ''> absolute inset-0 max-w-none img=imgContainer9
+                <div 3:104 'Container'> h-[22.5px] w-[103.97px]
+                    <div 3:105 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#f4f1de] text-[15px] text-center top-[10.5px]
+                      <p  ''> leading-[22.5px]
+                        » Re-check now
+          <div 3:106 'Section - Filters and Configuration:margin'> flex-col h-[80px] items-start pb-[32px]
+            <div 3:107 'Section - Filters and Configuration'> h-[48px] items-center justify-between
+              <div 3:108 'Container'> gap-[16px] items-center
+                <div 3:109 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] gap-[8px] h-[48px] items-center px-[18px] py-[2px] rounded-[12px]
+                  <div 3:110 'Container'> h-[16.667px] w-[13.333px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer10
+                  <div 3:112 'Container'> h-[22.5px] w-[72.75px]
+                      <div 3:113 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Delhi NCR
+                  <div 3:114 'Container'> h-[6.167px] w-[10px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer11
+                <div 3:116 'Background+Border+Shadow'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] gap-[4px] h-[48px] items-center p-[6px] rounded-[12px]
+                  <div 3:117 'Button'> bg-[#415a77] rounded-[8px]
+                    <div  ''> items-center justify-center px-[16px]
+                      <div 3:118 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[14px] text-center
+                        <p  ''> leading-[21px]
+                          » Blinkit
+                  <div 3:119 'Button'> rounded-[8px]
+                    <div  ''> items-center justify-center px-[16px]
+                      <div 3:120 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+                        <p  ''> leading-[21px]
+                          » Zepto
+                  <div 3:121 'Button'> rounded-[8px]
+                    <div  ''> items-center justify-center px-[16px]
+                      <div 3:122 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] text-center
+                        <p  ''> leading-[21px]
+                          » Instamart
+              <div 3:123 'Container'> gap-[15.99px] items-center
+                <div 3:124 'Label'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] gap-[11.99px] h-[48px] items-center px-[18px] py-[2px] rounded-[12px]
+                  <div 3:125 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:126 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.35px] uppercase
+                        <p  ''> leading-[21px]
+                          » SHOW RIVAL
+                  <div 3:127 'Background+Border'> bg-[#778d7a] border-2 border-[#0d1b2a] h-[24px] rounded-[9999px] w-[44px]
+                    <div  ''> flex-col items-start pl-[4px] pr-[24px] py-[4px]
+                      <div 3:128 'Background'> bg-[#0d1b2a] rounded-[9999px] size-[16px]
+                <div 3:129 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] gap-[8px] h-[48px] items-center px-[18px] py-[2px] rounded-[12px]
+                  <div 3:130 'Container'> size-[15px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer12
+                  <div 3:132 'Container'> h-[22.5px] w-[110.22px]
+                      <div 3:133 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[10.5px]
+                        <p  ''> leading-[22.5px]
+                          » Snapshot: Now
+                  <div 3:134 'Container'> h-[6.167px] w-[10px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer11
+          <div 3:136 '4) ONE row with two columns (items-start, map h-[640px], right column flex flex-col gap-6)'> gap-x-[32px] gap-y-[32px] grid grid-cols-[repeat(12,minmax(0,1fr))] grid-rows-[_844.50px]
+            <div 3:137 'Aside - RIGHT COLUMN: 4 cols, flex flex-col gap-6, perfectly fitting beside 640px map'> flex-col gap-[24px] items-start justify-self-stretch min-h-[800px]
+              <div 3:138 'Block 1: 2x2 Grid of 4 Small Metric Tiles (numerals 48px Fraunces, 16px padding)'> gap-x-[16px] gap-y-[16px] grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[__134px_113px]
+                <div 3:139 'Tile 1: In Stock (bg-[#778D7A] text-[#0D1B2A])'> bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col gap-[21px] items-start justify-self-stretch p-[18px] rounded-[16px]
+                  <div 3:140 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:141 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+                        <p  ''> leading-[21px]
+                          » IN STOCK
+                  <div 3:142 'Margin'> 
+                    <div  ''> flex-col items-start pt-[8px]
+                      <div 3:143 'Container'> flex-col items-start
+                        <div 3:144 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[48px]
+                          <p  ''> leading-[48px]
+                            » 9
+                <div 3:145 'Tile 2: Out of Stock (bg-[#F4F1DE] text-[#0D1B2A] border-dashed)'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed drop-shadow-[4px_4px_0px_#0d1b2a] flex-col items-start justify-between justify-self-stretch p-[18px] rounded-[16px]
+                  <div 3:146 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:147 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+                        <p  ''> leading-[21px]
+                          » OUT OF
+                        <p  ''> leading-[21px]
+                          » STOCK
+                  <div 3:148 'Margin'> 
+                    <div  ''> flex-col items-start pt-[8px]
+                      <div 3:149 'Container'> flex-col items-start
+                        <div 3:150 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[48px]
+                          <p  ''> leading-[48px]
+                            » 4
+                <div 3:151 'Tile 3: Price Gap (bg-[#D4C4A8] text-[#0D1B2A])'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col items-start justify-between justify-self-stretch p-[18px] rounded-[16px]
+                  <div 3:152 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:153 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+                        <p  ''> leading-[21px]
+                          » PRICE GAP
+                  <div 3:154 'Margin'> 
+                    <div  ''> flex-col items-start pt-[8px]
+                      <div 3:155 'Container'> flex-col items-start
+                        <div 3:156 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#0d1b2a] text-[48px]
+                          <p  ''> leading-[48px]
+                            » 1
+                <div 3:157 'Tile 4: Total (bg-[#415A77] text-[#F4F1DE])'> bg-[#415a77] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col items-start justify-between justify-self-stretch p-[18px] rounded-[16px]
+                  <div 3:158 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:159 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[14px] tracking-[0.7px] uppercase
+                        <p  ''> leading-[21px]
+                          » TOTAL
+                  <div 3:160 'Margin'> 
+                    <div  ''> flex-col items-start pt-[8px]
+                      <div 3:161 'Container'> flex-col items-start
+                        <div 3:162 ''> flex-col font-['Fraunces:SemiBold'] font-semibold justify-center text-[#f4f1de] text-[48px]
+                          <p  ''> leading-[48px]
+                            » 14
+              <div 3:163 'Article - Block 2: AI Summary Card (bg-[#0D1B2A] text-[#F4F1DE], 20px radius, 2px border, p-5)'> bg-[#0d1b2a] border-2 border-[#f4f1de] drop-shadow-[6px_6px_0px_#0d1b2a] flex-col items-start p-[26px] rounded-[20px]
+                <div 3:164 'Heading 2:margin'> 
+                  <div  ''> flex-col items-start pb-[10px]
+                    <div 3:165 'Heading 2'> gap-[8px] items-center
+                      <div 3:166 'Container'> size-[15px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer13
+                      <div 3:168 'Container'> flex-col items-start
+                        <div 3:169 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[18px]
+                          <p  ''> leading-[27px]
+                            » AI summary
+                <div 3:170 'Margin'> h-[113.5px]
+                    <div 3:171 'Container'> absolute flex-col items-start left-0 top-[-0.94px]
+                      <div 3:172 ''> flex-col font-['Inter:Regular'] font-normal justify-center text-[#f4f1de] text-[15px]
+                        <p  ''> leading-[24.38px]
+                          » 4 South Delhi pincodes are out of
+                        <p  ''> leading-[24.38px]
+                          » stock on Blinkit while Rival A is
+                        <p  ''> leading-[24.38px]
+                          » available. Alert your distributor
+                        <p  ''> leading-[24.38px]
+                          » and run a Zepto offer nearby.
+                <div 3:173 'Container'> 
+                  <div  ''> flex-col gap-[12px] items-start
+                    <div 3:174 'Button'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] gap-[8px] h-[48px] items-center justify-center px-[18px] py-[2px] rounded-[12px]
+                      <div 3:175 'Container'> h-[13.333px] w-[15.833px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer14
+                      <div 3:177 'Container'> h-[22.5px] w-[126.72px]
+                          <div 3:178 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[10.5px]
+                            <p  ''> leading-[22.5px]
+                              » Send to Telegram
+                    <div 3:179 'Button'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] h-[48px] items-center justify-center pb-[13.25px] pt-[11.75px] px-[18px] rounded-[12px]
+                      <div 3:180 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-center
+                        <p  ''> leading-[22.5px]
+                          » Approve
+              <div 3:181 'Section - Priority Deficit Areas'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[6px_6px_0px_#0d1b2a] flex-col items-start p-[22px] rounded-[20px]
+                <div 3:182 'Heading 2:margin'> 
+                  <div  ''> flex-col items-start pb-[8px]
+                    <div 3:183 'Heading 2'> flex-col items-start
+                      <div 3:184 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[18px]
+                        <p  ''> leading-[27px]
+                          » Worst areas
+                <div 3:185 'Container'> 
+                  <div  ''> flex-col items-start
+                    <div 3:186 'Row 1: Malviya Nagar (72px tall, border-b border-[#0D1B2A]/20)'> border-[rgba(13,27,42,0.2)] border-b h-[72px] items-center justify-between
+                      <div 3:187 'Container'> 
+                        <div  ''> gap-[12px] items-center
+                          <div 3:188 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed items-center justify-center p-[2px] rounded-[9999px] size-[32px]
+                            <div 3:189 'Container'> size-[10.4px]
+                              <img  ''> absolute inset-0 max-w-none img=imgContainer15
+                          <div 3:191 'Container'> h-[38.25px] w-[104.28px]
+                            <div 3:192 'Container'> absolute flex-col items-start left-0 pb-[0.75px] top-[-1px]
+                              <div 3:193 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px]
+                                <p  ''> leading-[18.75px]
+                                  » Malviya Nagar
+                            <div 3:194 'Container'> absolute flex-col items-start left-0 top-[17.75px]
+                              <div 3:195 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[13px]
+                                <p  ''> leading-[19.5px]
+                                  » 110017
+                      <div 3:196 'Container'> h-[38.25px] w-[99.33px]
+                          <div 3:197 'Container'> absolute flex-col items-end left-[12px] pb-[0.75px] top-[-1px]
+                            <div 3:198 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-right
+                              <p  ''> leading-[18.75px]
+                                » ₹29
+                          <div 3:199 'Container'> absolute flex-col items-end left-[12px] top-[17.75px]
+                            <div 3:200 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[13px] text-right
+                              <p  ''> leading-[19.5px]
+                                » ₹2 above rival
+                    <div 3:201 'Row 2: Hauz Khas (72px tall)'> h-[72px] items-center justify-between
+                      <div 3:202 'Container'> gap-[12px] items-center
+                        <div 3:203 'Background+Border'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed items-center justify-center p-[2px] rounded-[9999px] size-[32px]
+                          <div 3:204 'Container'> size-[10.4px]
+                            <img  ''> absolute inset-0 max-w-none img=imgContainer15
+                        <div 3:206 'Container'> h-[38.25px] w-[77.84px]
+                          <div 3:207 'Container'> absolute flex-col items-start left-0 pb-[0.75px] top-[-1px]
+                            <div 3:208 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px]
+                              <p  ''> leading-[18.75px]
+                                » Hauz Khas
+                          <div 3:209 'Container'> absolute flex-col items-start left-0 top-[17.75px]
+                            <div 3:210 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[13px]
+                              <p  ''> leading-[19.5px]
+                                » 110016
+                      <div 3:211 'Container'> h-[38.25px] w-[99.88px]
+                        <div 3:212 'Container'> absolute flex-col items-end left-[12px] pb-[0.75px] top-[-1px]
+                          <div 3:213 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[15px] text-right
+                            <p  ''> leading-[18.75px]
+                              » ₹31
+                        <div 3:214 'Container'> absolute flex-col items-end left-[12px] top-[17.75px]
+                          <div 3:215 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[13px] text-right
+                            <p  ''> leading-[19.5px]
+                              » ₹4 above rival
+            <div 3:216 'Section - Delhi NCR Shelf Availability Map'> bg-[#f4f1de] border-2 border-[#0d1b2a] flex-col items-start justify-self-stretch p-[2px] rounded-[20px] shadow-[6px_6px_0px_0px_#0d1b2a]
+              <div 3:217 'Vector Map SVG'> h-[840.5px]
+                  <img  ''> absolute inset-0 max-w-none img=imgVectorMapSvg
+                  <div 3:233 'Pin 1: Dwarka North (spaced >24px from Dwarka text at 315, 70)'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[80px] p-[2px] rounded-[9999px] size-[36px] top-[230px]
+                    <div 3:234 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:236 'Pin 2: Dwarka South (spaced >24px from Dwarka text)'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[85px] p-[2px] rounded-[9999px] size-[36px] top-[365px]
+                    <div 3:237 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:239 'Pin 3: West Janakpuri'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[175px] p-[2px] rounded-[9999px] size-[36px] top-[180px]
+                    <div 3:240 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:242 'Pin 4: Central Delhi North'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[320px] p-[2px] rounded-[9999px] size-[36px] top-[110px]
+                    <div 3:243 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:245 'Pin 5: Lajpat Nagar North (spaced >24px from Lajpat Nagar text at 255, 505)'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[490px] p-[2px] rounded-[9999px] size-[36px] top-[200px]
+                    <div 3:246 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:248 'Pin 6: East of Kailash (spaced >24px from Lajpat Nagar text)'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[570px] p-[2px] rounded-[9999px] size-[36px] top-[290px]
+                    <div 3:249 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:251 'Pin 7: GK South (spaced >24px from Greater Kailash text at 395, 550)'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[550px] p-[2px] rounded-[9999px] size-[36px] top-[445px]
+                    <div 3:252 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:254 'Pin 8: South-East Outer'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[620px] p-[2px] rounded-[9999px] size-[36px] top-[480px]
+                    <div 3:255 'Rectangle'> size-[20px]
+                  <div 3:256 'Pin 9: Vasant Kunj'> absolute bg-[#778d7a] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[225px] p-[2px] rounded-[9999px] size-[36px] top-[410px]
+                    <div 3:257 'Container'> h-[11.375px] w-[14.917px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer16
+                  <div 3:259 'Pin 10: Hauz Khas South (spaced from Hauz Khas text at 330, 320)'> absolute bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[320px] p-[2px] rounded-[9999px] size-[36px] top-[375px]
+                    <div 3:260 'Container'> size-[13px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer17
+                  <div 3:262 'Pin 12: Saket West (spaced from Saket label at 520, 350)'> absolute bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[310px] p-[2px] rounded-[9999px] size-[36px] top-[470px]
+                    <div 3:263 'Container'> size-[13px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer17
+                  <div 3:265 'Pin 13: Saket Central / East'> absolute bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[420px] p-[2px] rounded-[9999px] size-[36px] top-[475px]
+                    <div 3:266 'Container'> size-[13px]
+                      <img  ''> absolute inset-0 max-w-none img=imgContainer17
+                  <div 3:268 'Pin 14: South Saket Border (at 550px top, 395px left)'> absolute bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[2px_2px_0px_#0d1b2a] items-center justify-center left-[395px] p-[2px] rounded-[9999px] size-[36px] top-[550px]
+                    <div 3:269 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[16px] text-center
+                      <p  ''> leading-[24px]
+                        » ₹
+                  <div 3:270 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[70px] text-[#0d1b2a] text-[14px] top-[325.5px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Dwarka
+                  <div 3:271 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[320px] text-[#0d1b2a] text-[14px] top-[340.5px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Hauz Khas
+                  <div 3:272 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[425px] text-[#0d1b2a] text-[14px] top-[400.5px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Malviya Nagar
+                  <div 3:273 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[350px] text-[#0d1b2a] text-[14px] top-[530.5px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Saket
+                  <div 3:274 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[550px] text-[#0d1b2a] text-[14px] top-[416px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Greater
+                    <p  ''> leading-[21px]
+                      » Kailash
+                  <div 3:275 ''> absolute flex-col font-['Inter:Bold'] font-bold justify-center left-[505px] text-[#0d1b2a] text-[14px] top-[265.5px] tracking-[0.7px]
+                    <p  ''> leading-[21px]
+                      » Lajpat Nagar
+                  <div 3:276 'Bottom-Left Legend Card (24px margin from edges, bg-[#F4F1DE], 2px outline)'> absolute bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col gap-[10px] items-start left-[24px] p-[16px] rounded-[12px]
+                    <div 3:277 'Container'> 
+                      <div  ''> gap-[10px] items-center
+                        <div 3:278 'Background+Border'> bg-[#778d7a] border border-[#0d1b2a] items-center justify-center rounded-[9999px] size-[18px]
+                          <div 3:279 'Container'> h-[7.394px] w-[9.696px]
+                            <img  ''> absolute inset-0 max-w-none img=imgContainer18
+                        <div 3:281 'Container'> flex-col items-start
+                          <div 3:282 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px]
+                            <p  ''> leading-[21px]
+                              » In stock (9)
+                    <div 3:283 'Container'> 
+                      <div  ''> gap-[10px] items-center
+                        <div 3:284 'Background+Border'> bg-[#f4f1de] border border-[#0d1b2a] border-dashed items-center justify-center rounded-[9999px] size-[18px]
+                          <div 3:285 'Container'> size-[8.45px]
+                            <img  ''> absolute inset-0 max-w-none img=imgContainer19
+                        <div 3:287 'Container'> flex-col items-start
+                          <div 3:288 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px]
+                            <p  ''> leading-[21px]
+                              » Out of stock (4)
+                    <div 3:289 'Container'> 
+                      <div  ''> gap-[10px] items-center
+                        <div 3:290 'Background+Border'> bg-[#d4c4a8] border border-[#0d1b2a] h-[19px] items-center justify-center rounded-[9999px] w-[18px]
+                          <div 3:291 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[11px] text-center
+                            <p  ''> leading-[16.5px]
+                              » ₹
+                        <div 3:292 'Container'> flex-col items-start
+                          <div 3:293 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[14px]
+                            <p  ''> leading-[21px]
+                              » Price gap (1)
+                  <div 3:294 'Pin 11: SELECTED PIN - Malviya Nagar (at 440px top, 375px left)'> absolute flex-col items-start left-[375px] top-[440px]
+                    <div 3:295 'Selected Ring Pin'> bg-[#f4f1de] border-2 border-[#0d1b2a] border-dashed items-center justify-center p-[2px] rounded-[9999px] size-[36px]
+                      <div 3:296 'Selected Ring Pin:shadow'> absolute bg-[rgba(255,255,255,0)] left-[-2px] rounded-[9999px] shadow-[0px_0px_0px_2px_white,0px_0px_0px_6px_#415a77] size-[36px] top-[-2px]
+                      <div 3:297 'Container'> size-[13px]
+                        <img  ''> absolute inset-0 max-w-none img=imgContainer17
+                    <div 3:299 'Tooltip Floating DIRECTLY Above Pin (does not cover any text label)'> absolute bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] flex-col items-start left-[-114.22px] pb-[14px] pt-[13px] px-[14px] rounded-[12px] w-[264.44px]
+                      <div 3:300 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 3:301 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[15px]
+                            <p  ''> leading-[22.5px]
+                              » 110017 · Malviya Nagar
+                      <div 3:302 'Container'> 
+                        <div  ''> flex-col items-start
+                          <div 3:303 ''> flex-col font-['Inter:Medium'] font-medium justify-center text-[#0d1b2a] text-[14px]
+                            <p  ''> leading-[21px]
+                              » Out of stock · ₹29 · Checked 1h ago
+                      <div 3:304 ''> absolute items-center justify-center left-1/2 size-[16.971px]
+                        <div  ''> rotate-45
+                          <div  'Caret'> bg-[#f4f1de] border-[#0d1b2a] border-b-2 border-r-2 size-[12px]
+              <div 3:305 'Live Sticker (Top-Left, 24px margin)'> absolute bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] left-[24px] top-[24px]
+                <div  ''> gap-[6px] items-center px-[16px] py-[6px]
+                  <div 3:306 'Background'> bg-[#0d1b2a] rounded-[9999px] size-[8px]
+                  <div 3:307 'Container'> 
+                    <div  ''> flex-col items-start
+                      <div 3:308 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[14px] tracking-[0.7px] uppercase
+                        <p  ''> leading-[21px]
+                          » LIVE PINCODE DATA
+              <div 3:309 'Zoom Map Controls (Top-Right, 24px margin, 40px squares, bg-[#F4F1DE])'> absolute top-[24px]
+                <div  ''> flex-col gap-[8px] items-start
+                  <div 3:310 'Button - Zoom in'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] items-center justify-center p-[2px] rounded-[10px] size-[40px]
+                    <div 3:311 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[20px] text-center
+                      <p  ''> leading-[28px]
+                        » +
+                  <div 3:312 'Button - Zoom out'> bg-[#f4f1de] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] items-center justify-center p-[2px] rounded-[10px] size-[40px]
+                    <div 3:313 ''> flex-col font-['Inter:Bold'] font-bold justify-center text-[#0d1b2a] text-[20px] text-center
+                      <p  ''> leading-[28px]
+                        » −
+          <div 3:314 '5) SNAPSHOT BAR: Sits strictly BELOW both columns with mt-8, full width, 72px tall:margin'> flex-col h-[104px] items-start pt-[32px]
+            <div 3:315 '5) SNAPSHOT BAR: Sits strictly BELOW both columns with mt-8, full width, 72px tall'> bg-[#d4c4a8] border-2 border-[#0d1b2a] drop-shadow-[6px_6px_0px_#0d1b2a] h-[72px] items-center justify-between px-[34px] py-[2px] rounded-[20px]
+              <div 3:316 'Left label'> 
+                <div  ''> gap-[8px] items-center
+                  <div 3:317 'Container'> size-[18.333px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer20
+                  <div 3:319 'Container'> flex-col items-start
+                    <div 3:320 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#0d1b2a] text-[18px]
+                      <p  ''> leading-[27px]
+                        » Snapshot
+              <div 3:321 'Tablist - Middle Timeline Options'> 
+                <div  ''> gap-[24px] items-center
+                  <div 3:322 'Button'> bg-[#415a77] drop-shadow-[2px_2px_0px_#0d1b2a] flex-col items-center justify-center px-[16px] py-[6px] rounded-[9999px]
+                    <div 3:323 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[15px] text-center
+                      <p  ''> leading-[22.5px]
+                        » Now
+                  <div 3:324 'Button'> h-[22.5px] w-[49.69px]
+                    <div 3:325 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[calc(50%-0.75px)]
+                      <p  ''> leading-[22.5px]
+                        » 6h ago
+                  <div 3:326 'Button'> h-[22.5px] w-[59.2px]
+                    <div 3:327 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[calc(50%-0.75px)]
+                      <p  ''> leading-[22.5px]
+                        » 24h ago
+                  <div 3:328 'Button'> h-[22.5px] w-[48.16px]
+                    <div 3:329 ''> absolute flex-col font-['Inter:Semi_Bold'] font-semibold justify-center left-1/2 text-[#0d1b2a] text-[15px] text-center top-[calc(50%-0.75px)]
+                      <p  ''> leading-[22.5px]
+                        » 7d ago
+              <div 3:330 'Right Primary Button'> bg-[#0d1b2a] border-2 border-[#0d1b2a] drop-shadow-[4px_4px_0px_#0d1b2a] h-[44px] rounded-[12px]
+                <div  ''> gap-[8px] items-center px-[22px] py-[2px]
+                  <div 3:331 'Container'> h-[15px] w-[12px]
+                    <img  ''> absolute inset-0 max-w-none img=imgContainer21
+                  <div 3:333 'Container'> 
+                    <div  ''> flex-col items-center
+                      <div 3:334 ''> flex-col font-['Inter:Semi_Bold'] font-semibold justify-center text-[#f4f1de] text-[14px] text-center
+                        <p  ''> leading-[21px]
+                          » Re-check selected · 3 credits

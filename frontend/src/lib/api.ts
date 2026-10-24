@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useSWR, { type SWRConfiguration } from "swr";
 import { AUTH_ENABLED, getAccessToken, redirectToLogin, rejectSession } from "./auth";
+import { isMockAsset, MOCK_MODE, mockRequest } from "./mock";
 import type { ApiErrorBody, ApiErrorField } from "./types";
 
 /**
@@ -70,10 +71,23 @@ function composeMessage(status: number, body: Partial<ApiErrorBody> | null): Api
   return new ApiError(status, message, code, fields);
 }
 
+/** Demo mode: answer from the hard-coded data in ./mock instead of the backend. */
+async function mockResponse(path: string, init?: RequestOptions): Promise<Response> {
+  const { status, body, contentType } = await mockRequest(path, init);
+  if (status === 204 || body === undefined) return new Response(null, { status: 204 });
+  const text = typeof body === "string" ? body : JSON.stringify(body);
+  return new Response(text, { status, headers: { "Content-Type": contentType ?? "application/json" } });
+}
+
 async function request(path: string, init?: RequestOptions): Promise<Response> {
   const { json, noAuthRedirect, ...rest } = init ?? {};
   const token = await getAccessToken();
   let res: Response;
+  if (MOCK_MODE) {
+    res = await mockResponse(path, init);
+    if (!res.ok) throw composeMessage(res.status, await res.json().catch(() => null));
+    return res;
+  }
   try {
     res = await fetch(`${API_URL}/api${path}`, {
       ...rest,
@@ -145,6 +159,7 @@ export function mediaUrl(url: string | null | undefined) {
   if (!url) return null;
   if (/^https?:\/\//i.test(url)) return url;
   if (url.startsWith("//")) return null;
+  if (isMockAsset(url)) return url;
   return `${API_URL}${url.startsWith("/") ? "" : "/"}${url}`;
 }
 
