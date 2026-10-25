@@ -195,7 +195,7 @@ Demand forecasting by pincode, learning from approved actions, review analysis f
 
 1. A run starts by hand, from Telegram `/check`, or from the scheduler (every 15 minutes it looks for due products).
 2. Plan limits and today's credit budget are checked.
-3. Jobs are created: (seller product + each confirmed competitor) × platforms × pincodes. Live runs over `TINYFISH_LIVE_MAX_JOBS_PER_RUN` (default 6) are refused.
+3. Jobs are created: (seller product + each confirmed competitor) × platforms × pincodes. Live runs are trimmed to `TINYFISH_LIVE_MAX_JOBS_PER_RUN` agent checks (default 6), seller first; later runs rotate through the rest.
 4. Jobs run in the background, capped by `TINYFISH_MAX_CONCURRENCY` (default 2).
 5. Each result is validated, retried once if the error is retryable, saved with its screenshot and trace, and streamed to the page over SSE.
 6. After the run: change detection → alert rules → AI summary, recommendations and review insights → Telegram delivery.
@@ -245,7 +245,7 @@ The app runs with no keys. Each missing key switches one part to a fallback: sim
 |---|---|---|
 | **Agent API** | Stealth browser agent sets the pincode, searches the product, reads the card, returns JSON against an output schema, plus a screenshot | **Implemented** for Zepto and Instamart (live-tested in Delhi). Blinkit blocks it, so checks fail fast as "blocked" |
 | **Browser API** | Remote browser session driven by Playwright over CDP, with an Indian proxy | **Implemented but not the default.** In tests Blinkit returned 403, Zepto rendered blank, Instamart asked for phone login |
-| **Search API** | Finds the Amazon or Flipkart product page for a product name | **Implemented** for marketplaces. Not yet used for competitor discovery (**Planned**) |
+| **Search API** | Finds the Amazon or Flipkart product page for a product name | **Implemented** for marketplaces and for competitor discovery across Blinkit, Zepto, Instamart, Amazon and Flipkart |
 | **Fetch API** | Reads the Amazon or Flipkart product page and parses price, MRP and stock | **Implemented.** Cannot set a pincode, so results are listing-wide and labelled that way |
 
 ### Pincode Mapper flow
@@ -327,9 +327,9 @@ These are **expected outcomes, not measured results.** No user study or sales da
 | Status | Features |
 |---|---|
 | **Working** | Live pincode checks on Zepto and Instamart (Agent API); Amazon and Flipkart (Search + Fetch); screenshots and agent traces; run streaming; heatmap, hot zones, snapshots; change detection; weekly stats and CSV; alert rules and quiet hours; Gemini summary, recommendations, chat, alert parsing with grounding check and rule fallback; pricing guardrails; Telegram linking, alerts, daily briefing, Approve, `/check`, `/compare`; plan limits and credit budget; settings and data export; tests in `backend/tests` |
-| **Mock** | Blinkit checks (live is blocked); competitor discovery (placeholder suggestions); true checkout price breakdown; whole-app mock mode |
+| **Mock** | Blinkit checks (live is blocked); competitor discovery without a TinyFish key (placeholder suggestions); true checkout price breakdown; whole-app mock mode |
 | **Prototype** | Review insights (inferred from signals, not real reviews); Browser API flow; payments and plan switching (test mode, no charge); marketplace results are listing-wide, not per pincode; `volatile_boost` setting is stored but the scheduler does not use it yet |
-| **Planned** | Applying approved price changes on platforms; acting on "Alert distributor" outside ShelfSense; Creative role; Search-based competitor discovery; large-scale live coverage (50+ pincodes) |
+| **Planned** | Applying approved price changes on platforms; acting on "Alert distributor" outside ShelfSense; Creative role; large-scale live coverage (50+ pincodes) |
 
 ### Why it is buildable
 

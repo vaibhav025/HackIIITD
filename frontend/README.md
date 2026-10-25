@@ -28,6 +28,7 @@ With no API keys the backend runs in demo mode (mock checks, rule-based AI, simu
 | `/heatmap?product=[id]` | Pincode heatmap with live re-checks over SSE |
 | `/help` | Help Centre chatbot |
 | `/alerts` | Alerts inbox (all / unread, mark read) |
+| `/inventory` | My Inventory: demo stock per warehouse / dark store, sell / restock / set to 0, simulated live orders, stock-out toasts + Telegram push |
 | `/products/[id]/settings` | Product settings |
 | `/settings` | User settings |
 | `/products/[id]/telegram` | Telegram connection |

@@ -109,6 +109,9 @@ TELEGRAM_ALERT_KINDS = (
     "rating_below",
     "rival_oos",
     "custom",
+    # Raised by services/inventory.py when a warehouse line runs out / low.
+    "inventory_out",
+    "inventory_low",
 )
 TELEGRAM_STREAMS = (*TELEGRAM_ALERT_KINDS, "recommendations", "briefing")
 # Stored ``TelegramLink.alert_types`` (a NOT NULL JSON list):
@@ -659,6 +662,10 @@ async def deliver_deferred_alerts(now: datetime | None = None) -> int:
                     .where(
                         Alert.sent_telegram.is_(False),
                         Alert.created_at >= now - DEFERRED_ALERT_WINDOW,
+                        # Stock-outs are pushed the moment they happen
+                        # (services/inventory.py); a late retry could announce
+                        # a stock-out that has since been restocked.
+                        Alert.kind != "inventory_out",
                         or_(
                             Alert.product_id.in_(select(TelegramLink.product_id)),
                         ),

@@ -16,6 +16,8 @@ class RunCreated(BaseModel):
     # Agent sessions cost 1 credit each; Fetch reads (Amazon, Flipkart) are free.
     estimated_credits: int
     total_jobs: int = 0
+    # Live agent checks over TINYFISH_LIVE_MAX_JOBS_PER_RUN, left for the next runs.
+    deferred_jobs: int = 0
 
 
 class SkippedPlatform(BaseModel):
@@ -29,6 +31,8 @@ class RunEstimate(BaseModel):
     jobs: int
     credits: int
     agent_jobs: int
+    # Live agent checks over TINYFISH_LIVE_MAX_JOBS_PER_RUN, left for the next runs.
+    deferred_jobs: int = 0
     platforms: list[str]
     pincodes: list[str]
     # Selected apps live mode does not check (TINYFISH_LIVE_PLATFORMS).

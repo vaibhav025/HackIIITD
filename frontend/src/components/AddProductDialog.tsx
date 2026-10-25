@@ -252,8 +252,12 @@ export default function AddProductDialog({ onClose }: { onClose: () => void }) {
         setPinsSaved(true);
       }
       try {
-        await api(`/products/${product.id}/runs`, { method: "POST", json: {} });
-        toast("First check started");
+        const started = await api<{ total_jobs?: number; deferred_jobs?: number }>(`/products/${product.id}/runs`, { method: "POST", json: {} });
+        toast(
+          started.deferred_jobs
+            ? `First check started (${started.total_jobs ?? 0} checks). ${started.deferred_jobs} more run in the next checks to save credits.`
+            : "First check started",
+        );
         router.push(`/heatmap?product=${product.id}`);
       } catch (e) {
         // The product is fully set up; only the first run couldn't start (e.g. daily credit budget).
@@ -436,6 +440,11 @@ export default function AddProductDialog({ onClose }: { onClose: () => void }) {
             {step === 2 && (
               <>
                 <p className="text-[16px] leading-6 text-ink/80 mt-1">We found similar products. Pick the ones to track.</p>
+                {suggestSource === "tinyfish" && suggestions.length > 0 && (
+                  <p className="mt-3 inline-flex items-center gap-2 rounded-[10px] border-2 border-ink bg-sage/40 px-3 py-1.5 text-[13px] leading-5 font-semibold">
+                    Live results · found just now on {[...new Set(suggestions.map((s) => platformLabel(s.platform)))].join(", ")}. Open a listing to check it.
+                  </p>
+                )}
                 {suggestSource && suggestSource !== "tinyfish" && suggestions.length > 0 && (
                   <p className="mt-3 inline-flex items-center gap-2 rounded-[10px] border-2 border-ink bg-sand px-3 py-1.5 text-[13px] leading-5 font-semibold">
                     Demo suggestions · live competitor search needs a TinyFish API key. Edit or add real rivals later in settings.
@@ -461,6 +470,18 @@ export default function AddProductDialog({ onClose }: { onClose: () => void }) {
                           className="accent-[var(--slate)] size-4 shrink-0"
                         />
                         <span className="font-semibold text-[15px] flex-1 min-w-0 break-words">{s.name}</span>
+                        {s.url && (
+                          <a
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[13px] font-semibold underline underline-offset-2 shrink-0"
+                            onClick={(e) => e.stopPropagation()}
+                            aria-label={`View ${s.name} on ${platformLabel(s.platform)} (opens in a new tab)`}
+                          >
+                            View ↗
+                          </a>
+                        )}
                         {isSaved && <span className="chip bg-sage shrink-0">✓ Saved</span>}
                         <span className="chip bg-linen shrink-0">{platformLabel(s.platform)}</span>
                       </label>

@@ -125,7 +125,7 @@ async def recover_orphaned_runs() -> int:
 
 async def scan_due_products() -> int:
     """Create scheduled runs for products whose frequency window elapsed."""
-    from .runner import build_jobs, create_run, schedule_run
+    from .runner import create_run, plan_jobs, schedule_run
 
     now = utcnow()
     await recover_orphaned_runs()
@@ -205,8 +205,8 @@ async def scan_due_products() -> int:
                 )
             remaining = budget_left[product.user_id]
             if remaining is not None:
-                # Same estimate as a manual check: one credit per job.
-                estimated = len(await build_jobs(session, product, platforms, pincodes))
+                # Same estimate as a manual check (live runs trimmed to the per-run limit).
+                estimated = (await plan_jobs(session, product, platforms, pincodes)).credits
                 if estimated > remaining:
                     logger.info(
                         "skipping product=%s: run needs %s credits but only %s of "

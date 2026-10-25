@@ -17,7 +17,7 @@ from .tinyfish.base import TinyFishError, get_tinyfish_client, tinyfish_mode
 logger = logging.getLogger("shelfsense.competitor_discovery")
 
 DEMO_PLATFORMS = ("blinkit", "zepto", "instamart")
-SUGGESTION_LIMIT = 6
+SUGGESTION_LIMIT = 10
 _PLATFORM_LABEL = {
     "blinkit": "Blinkit",
     "zepto": "Zepto",
@@ -67,15 +67,18 @@ async def discover_competitors(
         except Exception:  # a flaky search must not break the page
             logger.exception("TinyFish Search failed, using demo suggestions")
         else:
+            own = _clean(brand).lower() if brand else ""
             found = [
                 {
                     "name": hit.name,
                     "platform": hit.platform,
                     "url": hit.url,
                     "search_query": hit.name,
+                    "price": hit.price,
                 }
                 for hit in hits
-                if hit.platform
+                # The seller's own listings aren't rivals.
+                if hit.platform and not (own and own in hit.name.lower())
             ]
             if found:
                 return found[:SUGGESTION_LIMIT], "tinyfish"

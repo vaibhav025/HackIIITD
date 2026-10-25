@@ -452,7 +452,7 @@ def test_migration_upgrades_a_fresh_sqlite_database() -> None:
     assert new <= columns()
     with sqlite3.connect(database) as connection:
         version = connection.execute("SELECT version_num FROM alembic_version").fetchone()
-    assert version == ("0002_price_thresholds",)
+    assert version == ("0004_inventory",)
     alembic("downgrade", "0001_initial")
     assert not new & columns()
     alembic("upgrade", "head")

@@ -2,7 +2,6 @@
 
 import { animate } from "motion";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useScrollLock } from "@/lib/a11y";
 import Dialogue, { useTypewriter } from "./Dialogue";
 import type { Expression } from "./expressions";
 import MochiFace from "./MochiFace";
@@ -43,8 +42,6 @@ export default function Intro({
   const mochiRef = useRef<HTMLDivElement>(null);
   const riseRef = useRef<HTMLDivElement>(null);
   const doneRef = useRef(false);
-
-  useScrollLock(true);
 
   const beat: IntroBeat | { mood: Expression; text: string } =
     pos.kind === "intro" ? INTRO[pos.i] : pos.kind === "explain" ? INTRO_EXPLAIN[pos.i] : INTRO_OUTRO[pos.which];
@@ -143,10 +140,19 @@ export default function Intro({
     else if (id === "tour" || id === "solo") setPos({ kind: "outro", which: id });
   };
 
-  const onBackdrop = () => {
-    if (!tw.done) tw.finish();
-    else if (!intro?.choices && !intro?.input) next();
-  };
+  // The page stays usable during the intro: a press anywhere outside the dialogue (a nav link,
+  // "Open dashboard"...) quietly ends it, and that same click carries on to what was pressed.
+  const finishRef = useRef(finish);
+  finishRef.current = finish;
+  useEffect(() => {
+    const onDown = (e: PointerEvent) => {
+      const t = e.target as Node | null;
+      if (!t || boxRef.current?.contains(t) || mochiRef.current?.contains(t)) return;
+      finishRef.current("skipped");
+    };
+    window.addEventListener("pointerdown", onDown, true);
+    return () => window.removeEventListener("pointerdown", onDown, true);
+  }, [boxRef, mochiRef]);
 
   const fade = reduced ? "opacity 150ms ease-out" : undefined;
   const sheetPlace = mobile
@@ -160,12 +166,11 @@ export default function Intro({
       <div
         aria-hidden="true"
         className="m2-fade-in"
-        onClick={onBackdrop}
         style={{
           position: "fixed",
           inset: 0,
           background: "rgba(13,27,42,.55)",
-          pointerEvents: exiting ? "none" : "auto",
+          pointerEvents: "none",
           opacity: exiting ? 0 : 1,
           transition: "opacity 300ms ease-out",
         }}

@@ -200,6 +200,7 @@ async def estimate_run(
         jobs=len(plan.jobs),
         credits=plan.credits,
         agent_jobs=plan.agent_jobs,
+        deferred_jobs=plan.deferred_jobs,
         platforms=sorted({job.platform for job in plan.jobs}),
         pincodes=pincodes,
         skipped_platforms=[
@@ -242,7 +243,8 @@ async def start_run(
     async with lock:
         if await has_active_run(session, product_id):
             raise HTTPException(status_code=409, detail=ACTIVE_RUN_CONFLICT)
-        estimated = (await plan_jobs(session, product, platforms, pincodes)).credits
+        job_plan = await plan_jobs(session, product, platforms, pincodes)
+        estimated = job_plan.credits
         remaining = await remaining_credits_today(session, user.id, plan)
         if remaining is not None and estimated > remaining:
             raise HTTPException(
@@ -268,6 +270,7 @@ async def start_run(
         run_id=run.id,
         estimated_credits=sum(credit_cost(job.platform) for job in jobs),
         total_jobs=len(jobs),
+        deferred_jobs=job_plan.deferred_jobs,
     )
 
 

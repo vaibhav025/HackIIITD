@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { dismissToast, subscribeToasts, type Toast } from "@/lib/toast";
 import { EASE } from "@/lib/motion";
@@ -30,7 +31,15 @@ export default function Toaster() {
             role={t.tone === "error" ? "alert" : "status"}
           >
             <span className="grid place-items-center size-6 shrink-0 rounded-full border-2 border-ink bg-linen text-ink text-[13px] font-bold">{TONE[t.tone].icon}</span>
-            <p className="text-[15px] font-semibold leading-[22px] flex-1">{t.message}</p>
+            <div className="flex-1 min-w-0">
+              <p className="text-[15px] font-semibold leading-[22px]">{t.message}</p>
+              {t.detail && <p className="text-[14px] leading-5 mt-0.5">{t.detail}</p>}
+              {t.action && (
+                <Link href={t.action.href} onClick={() => dismissToast(t.id)} className="inline-block mt-1.5 text-[14px] font-bold underline underline-offset-2">
+                  {t.action.label}
+                </Link>
+              )}
+            </div>
             <button className="text-lg leading-none font-bold opacity-70 hover:opacity-100" aria-label="Dismiss" onClick={() => dismissToast(t.id)}>
               ×
             </button>

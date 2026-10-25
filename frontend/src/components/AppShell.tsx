@@ -16,6 +16,7 @@ import ActiveIndicator, { IndicatorGroup } from "./motion/ActiveIndicator";
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: "nav-dashboard" },
   { href: "/products", label: "Products", icon: "nav-products" },
+  { href: "/inventory", label: "My Inventory", icon: "inventory" },
   { href: "/heatmap", label: "Heatmaps", icon: "nav-heatmaps" },
   { href: "/agents", label: "Agents", icon: "agents" },
   { href: "/alerts", label: "Alerts", icon: "alerts" },
@@ -49,10 +50,23 @@ function AlertsIcon({ size = 16 }: { size?: number }) {
   );
 }
 
+/** Sand stacked-boxes icon for My Inventory, drawn to the same 16px / 1.33 stroke set. */
+function InventoryIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" aria-hidden className="shrink-0">
+      <rect x="1.67" y="8.33" width="5.66" height="5.66" rx="1" stroke="#D4C4A8" strokeWidth="1.33" />
+      <rect x="8.67" y="8.33" width="5.66" height="5.66" rx="1" stroke="#D4C4A8" strokeWidth="1.33" />
+      <rect x="5.17" y="2" width="5.66" height="5.66" rx="1" stroke="#D4C4A8" strokeWidth="1.33" />
+      <path d="M4.5 8.33v1.6M11.5 8.33v1.6M8 2v1.6" stroke="#D4C4A8" strokeWidth="1.33" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 /* eslint-disable @next/next/no-img-element */
 function Icon({ name, size = 16 }: { name: string; size?: number }) {
   if (name === "agents") return <AgentsIcon size={size} />;
   if (name === "alerts") return <AlertsIcon size={size} />;
+  if (name === "inventory") return <InventoryIcon size={size} />;
   return <img src={`/figma/shell/${name}.svg`} alt="" width={size} height={size} className="shrink-0" />;
 }
 
@@ -191,6 +205,7 @@ function useCrumbs(): string[] {
     return ["Products", product?.name ?? "…", last];
   }
   if (pathname.startsWith("/heatmap")) return ["Products", "Heatmap"];
+  if (pathname.startsWith("/inventory")) return ["Catalog", "My Inventory"];
   if (pathname.startsWith("/agents")) return ["TinyFish", "Agents"];
   if (pathname.startsWith("/alerts")) return ["Alerts"];
   if (pathname.startsWith("/help")) return ["Help Centre"];
@@ -204,7 +219,7 @@ function Bell() {
   const panelRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelId = useId();
-  const { data, error, isLoading, mutate } = useApi<{ items: Alert[]; unread: number }>("/me/alerts?limit=8", { refreshInterval: 60_000 });
+  const { data, error, isLoading, mutate } = useApi<{ items: Alert[]; unread: number }>("/me/alerts?limit=8", { refreshInterval: 15_000 });
   const { mutate: mutateKeys } = useSWRConfig();
   // Keep the /alerts inbox (if open) in step with the bell.
   const refreshAlerts = () => mutateKeys((k) => typeof k === "string" && k.startsWith("/me/alerts"));

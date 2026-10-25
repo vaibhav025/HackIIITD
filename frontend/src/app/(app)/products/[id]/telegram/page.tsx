@@ -14,7 +14,7 @@ import ProductHeader from "@/components/ProductHeader";
 import { CardSkeleton, ErrorCard, useConfirm } from "@/components/ui";
 
 /** Every alert kind the engine can raise, plus the two non-alert streams. */
-const ALERT_TYPES = ["oos_any", "oos_area", "price_change_pct", "price_gap_pct", "rating_below", "rival_oos", "custom", "recommendations", "briefing"];
+const ALERT_TYPES = ["oos_any", "oos_area", "price_change_pct", "price_gap_pct", "rating_below", "rival_oos", "custom", "inventory_out", "inventory_low", "recommendations", "briefing"];
 const LABELS: Record<string, string> = { ...ALERT_KIND_LABEL, recommendations: "New recommendations", briefing: "Morning briefing" };
 /**
  * API semantics for a chat's `alert_types`: null = everything (including kinds added later),

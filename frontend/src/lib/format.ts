@@ -6,6 +6,7 @@ export const PLATFORM_LABEL: Record<string, string> = {
   instamart: "Instamart",
   amazon: "Amazon",
   flipkart: "Flipkart",
+  own: "Own warehouse",
 };
 
 export const platformLabel = (p: string | null | undefined) => (p ? PLATFORM_LABEL[p] ?? p : "All platforms");
@@ -47,6 +48,8 @@ export const ALERT_KIND_LABEL: Record<string, string> = {
   rating_below: "Rating drop",
   rating_drop: "Rating drop",
   custom: "Custom rule",
+  inventory_out: "Warehouse stock-out",
+  inventory_low: "Warehouse stock low",
 };
 
 export const greeting = () => {

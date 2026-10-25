@@ -231,7 +231,6 @@ export const TOUR_LINES = {
   walking: "One sec, walking over…",
   missing: "Hmm, this bit isn't here right now — moving on!",
   noProducts: "No products yet — let's peek at the heatmap instead!",
-  dimClick: "Psst, over here!",
   pause: "Paused. Tap me to resume!",
   skip: "Okay! I'll be in the corner if you need me.",
   modalWait: "I'll wait here!",
@@ -254,6 +253,7 @@ export const PAGE_INTROS: Record<string, { text: string | ((name: string | null)
   "/products/:id/telegram": { text: "Five quick steps to get this product's alerts on Telegram.", mood: "excited" },
   "/heatmap": { text: "The heatmap! Every pin is a pincode. Tap one to peek inside.", mood: "excited" },
   "/agents": { text: "Agent HQ. Watch real browser sessions live, or replay old ones.", mood: "curious" },
+  "/inventory": { text: "Your stock in every warehouse and dark store. Try “Set to 0” and watch me shout!", mood: "curious" },
   "/alerts": { text: "Your alerts inbox. Stock-outs and price moves land here.", mood: "worried" },
   "/settings": { text: "Account settings: plan, Telegram, notifications and more.", mood: "happy" },
   "/help": { text: "Help Centre! Ask anything here — or just ask me 😉", mood: "wink" },
@@ -296,6 +296,7 @@ export const REACTIONS = {
   toastSuccess: ["Nice! ✨", "Done and dusted!", "Ooh, look at you go!", "Saved! High five 🙌"],
   /** First match wins, tested on the toast message. */
   toastError: [
+    [/out of stock|stock-?out/i, "Uh-oh, a stock-out! It's in your Alerts now (and on Telegram if a chat is linked). Restock before shoppers bounce."],
     [/credit|budget/i, "That check needs more credits than you have left. Try fewer pincodes, or peek at your plan in Settings."],
     [/network|fetch|reach|offline|timed? ?out/i, "Looks like I lost the server. Check your internet, then try again."],
     [/telegram|chat/i, "Telegram didn't go through. Is a chat linked? The product's Telegram tab sets it up."],

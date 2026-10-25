@@ -242,6 +242,8 @@ body {
 @keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-5px); opacity: 1; } }
 @keyframes pin-pop { 0% { transform: scale(0.6); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 @keyframes marquee { to { transform: translateX(-50%); } }
+/* My Inventory: a changed quantity settles into place. */
+@keyframes inv-tick { from { opacity: 0.35; transform: translateY(-4px); filter: blur(1.5px); } to { opacity: 1; transform: none; filter: none; } }
 
 /* Status pins: sage + check, linen dashed + ✕, sand + ₹, faded when stale. */
 .ss-pin {
@@ -510,4 +512,58 @@ h1 { letter-spacing: -0.035em; }
 :where(a, button, select, summary, [tabindex]):focus-visible {
   outline: 2px solid var(--slate);
   outline-offset: 2px;
+}
+
+/* Login: OTP digit boxes, the code step's entrance and the success tick. */
+@layer components {
+  .otp-box {
+    width: 100%;
+    max-width: 56px;
+    aspect-ratio: 5 / 6;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    background: var(--surface, #fff);
+    border: 1px solid var(--line-strong);
+    border-radius: 12px;
+    box-shadow: var(--shadow-xs);
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  }
+  .otp-box:focus { border-color: var(--slate); box-shadow: 0 0 0 4px rgba(61, 90, 128, 0.16); transform: translateY(-1px); }
+  .otp-box:disabled { opacity: 0.6; }
+  .otp-box-bad { border-color: #b4483e; animation: otp-shake 320ms cubic-bezier(0.36, 0.07, 0.19, 0.97); }
+}
+@keyframes otp-shake {
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+.auth-step { animation: rise 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+.auth-success-ring {
+  fill: var(--sage);
+  stroke: var(--ink);
+  stroke-width: 3;
+  transform-origin: 48px 48px;
+  animation: auth-pop 420ms cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+.auth-success-check {
+  fill: none;
+  stroke: var(--linen);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: auth-draw 380ms 300ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.auth-success-title { animation: rise 320ms 520ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+.auth-success-sub { animation: rise 320ms 620ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+@keyframes auth-pop { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes auth-draw { to { stroke-dashoffset: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .otp-box, .otp-box-bad, .auth-step, .auth-success-ring, .auth-success-title, .auth-success-sub { animation: none !important; transition: none !important; }
+  .auth-success-check { animation: none !important; stroke-dashoffset: 0; }
 }

@@ -577,3 +577,90 @@ export interface PlanChange {
     competitor_limit: number;
   }[];
 }
+
+// ---- My Inventory (backend/app/schemas/inventory.py) ------------------------
+
+export type StockStatus = "in_stock" | "low" | "out_of_stock";
+export type WarehousePlatform = "blinkit" | "zepto" | "instamart" | "amazon" | "flipkart" | "own";
+
+export interface Warehouse {
+  id: string;
+  name: string;
+  platform: WarehousePlatform | string;
+  kind: "dark_store" | "fulfilment_centre" | "own_warehouse" | string;
+  city: string;
+  pincode: string | null;
+}
+
+export interface InventoryLine {
+  item_id: string;
+  product_id: string;
+  product_name: string;
+  warehouse: Warehouse;
+  quantity: number;
+  low_stock_threshold: number;
+  status: StockStatus;
+  updated_at: string;
+}
+
+export interface InventoryProduct {
+  product_id: string;
+  name: string;
+  brand: string | null;
+  image_url: string | null;
+  total_units: number;
+  warehouses: InventoryLine[];
+}
+
+export interface InventoryEvent {
+  id: string;
+  item_id: string;
+  product_id: string;
+  product_name: string;
+  warehouse_name: string;
+  warehouse_platform: string;
+  delta: number;
+  quantity_after: number;
+  reason: "sale" | "restock" | "set" | "simulated_sale" | "seed" | string;
+  created_at: string;
+}
+
+export interface Inventory {
+  summary: { products: number; warehouses: number; units: number; out_of_stock: number; low_stock: number };
+  products: InventoryProduct[];
+  recent_events: InventoryEvent[];
+}
+
+/** Telegram push result for inventory alerts (sent to n of `linked` chats). */
+export interface TelegramDelivery {
+  sent: number;
+  linked: number;
+  bot_running: boolean;
+  /** "telegram_off" / "quiet_hours" when a low-stock alert was held back. */
+  skipped: string | null;
+}
+
+export interface InventoryAlert {
+  id: string;
+  kind: "inventory_out" | "inventory_low";
+  message: string;
+  product_id: string;
+  product_name: string;
+  item_id: string;
+  warehouse_name: string;
+  quantity: number;
+  created_at: string;
+  telegram: TelegramDelivery;
+}
+
+export interface InventoryMutation {
+  item: InventoryLine;
+  alerts: InventoryAlert[];
+  telegram: TelegramDelivery;
+}
+
+export interface SimulateSales {
+  changes: { item: InventoryLine; previous_quantity: number; delta: number; reason: string }[];
+  alerts: InventoryAlert[];
+  telegram: TelegramDelivery;
+}

@@ -179,6 +179,8 @@ class JobPlan:
 
     jobs: list[Job]
     skipped_platforms: list[str]
+    # Live agent checks left out of this run to stay within TINYFISH_LIVE_MAX_JOBS_PER_RUN.
+    deferred_jobs: int = 0
 
     @property
     def credits(self) -> int:
@@ -201,7 +203,46 @@ async def plan_jobs(
     skipped = skipped_platforms(settings, platforms)
     if skipped:
         jobs = [job for job in jobs if job.platform not in skipped]
+    limit = settings.tinyfish_live_max_jobs_per_run
+    agent = sum(1 for job in jobs if not is_fetch_platform(job.platform))
+    if settings.tinyfish_enabled and limit and agent > limit:
+        # Each run starts where the last one stopped, so successive runs cover every pair.
+        runs_so_far = len(
+            (await session.scalars(select(CheckRun.id).where(CheckRun.product_id == product.id))).all()
+        )
+        jobs, deferred = fit_live_limit(jobs, limit, offset=runs_so_far * limit)
+        return JobPlan(jobs, skipped, deferred)
     return JobPlan(jobs, skipped)
+
+
+def fit_live_limit(jobs: list[Job], limit: int, *, offset: int = 0) -> tuple[list[Job], int]:
+    """Trim a live run to ``limit`` agent checks (TINYFISH_LIVE_MAX_JOBS_PER_RUN) instead of
+    refusing it.
+
+    Live agent checks take minutes and cost real credits. Agent checks are ranked the seller's
+    own listing first, then rivals in the order they were added, each over pincodes then
+    platforms; the run takes ``limit`` of them starting at ``offset`` (wrapping), so the first
+    run covers the seller and later runs work through the rest. Amazon/Flipkart page reads are
+    free and quick, so they all stay. Returns the kept jobs and how many agent checks wait.
+    """
+    agent = [job for job in jobs if not is_fetch_platform(job.platform)]
+    if not limit or len(agent) <= limit:
+        return jobs, 0
+    entities = list(dict.fromkeys(job.competitor_id for job in jobs))  # own (None) comes first
+    pincodes = list(dict.fromkeys(job.pincode for job in jobs))
+    platforms = list(dict.fromkeys(job.platform for job in jobs))
+    ranked = sorted(
+        agent,
+        key=lambda job: (
+            entities.index(job.competitor_id),
+            pincodes.index(job.pincode),
+            platforms.index(job.platform),
+        ),
+    )
+    start = offset % len(ranked)
+    keep = {id(job) for job in (ranked[start:] + ranked[:start])[:limit]}
+    kept = [job for job in jobs if is_fetch_platform(job.platform) or id(job) in keep]
+    return kept, len(agent) - limit
 
 
 async def create_run(
@@ -235,22 +276,12 @@ async def create_run(
         logger.info(
             "live mode skips %s for product=%s", plan.skipped_platforms, product.id
         )
-    limit = settings.tinyfish_live_max_jobs_per_run
-    # Only agent checks are slow and paid; Fetch checks (Amazon, Flipkart) read
-    # one cached page per run and cost nothing extra.
-    agent_jobs = plan.agent_jobs
-    if settings.tinyfish_enabled and limit and agent_jobs > limit:
-        # Live agent checks take minutes and cost real credits each.
-        raise HTTPException(
-            status_code=422,
-            detail={
-                "code": "live_job_limit",
-                "message": (
-                    f"This check needs {agent_jobs} live TinyFish agent runs; the limit is "
-                    f"{limit} per run (TINYFISH_LIVE_MAX_JOBS_PER_RUN). Pick fewer "
-                    "pincodes or platforms."
-                ),
-            },
+    if plan.deferred_jobs:
+        logger.info(
+            "live run for product=%s trimmed to %s agent checks (%s left for later runs)",
+            product.id,
+            plan.agent_jobs,
+            plan.deferred_jobs,
         )
     run = CheckRun(
         id=str(uuid4()),

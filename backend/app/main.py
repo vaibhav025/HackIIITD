@@ -26,6 +26,7 @@ from .api.health import router as health_router
 from .api.heatmap import router as heatmap_router
 from .api.insights import router as insights_router
 from .api.intelligence import router as intelligence_router
+from .api.inventory import router as inventory_router
 from .api.me import router as me_router
 from .api.notifications import router as notifications_router
 from .api.products import router as products_router
@@ -262,6 +263,7 @@ def create_app() -> FastAPI:
     app.include_router(heatmap_router, prefix="/api")
     app.include_router(insights_router, prefix="/api")
     app.include_router(intelligence_router, prefix="/api")
+    app.include_router(inventory_router, prefix="/api")
     app.include_router(chat_router, prefix="/api")
     app.include_router(notifications_router, prefix="/api")
     app.include_router(settings_router, prefix="/api")

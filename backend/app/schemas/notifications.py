@@ -9,8 +9,11 @@ from pydantic import BaseModel, Field
 
 from .common import AlertKind, ClockTime, PatchModel
 
-# Alert kinds plus the two non-alert message streams a chat can opt into.
-TelegramAlertType = AlertKind | Literal["recommendations", "briefing"]
+# Alert kinds, the inventory stock alerts (raised by stock changes, not by
+# rules) and the two non-alert message streams a chat can opt into.
+TelegramAlertType = AlertKind | Literal[
+    "inventory_out", "inventory_low", "recommendations", "briefing"
+]
 
 
 class AlertResponse(BaseModel):

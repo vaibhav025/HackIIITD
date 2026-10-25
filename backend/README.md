@@ -37,6 +37,19 @@ Run the tests and linter:
 - `GET /api/tinyfish/usage` — mode, concurrency, credits today vs budget, runs today, 7-day success rate.
 - `GET /api/me/export?format=json` — full account export (CSV of results without `format`).
 
+### My Inventory (demo stock, migration `0004_inventory`)
+
+Every route is owner-scoped (another seller's line answers 404). Stock is **demo data**: on the first `GET` each seller gets realistic warehouses for the platforms their products are tracked on (Blinkit dark stores at their tracked pincodes, a Zepto / Instamart dark store, `Amazon FC · Gurugram (DEL4)`, a Flipkart FC, `Own warehouse · Okhla`) with deterministic quantities; new products get lines on the next load.
+
+- `GET /api/inventory` — `{summary, products: [{product_id, name, brand, total_units, warehouses: [{item_id, warehouse, quantity, low_stock_threshold, status, updated_at}]}], recent_events}`.
+- `POST /api/inventory/items/{item_id}/sell` `{units=1}` — never below 0; 409 when already 0.
+- `POST /api/inventory/items/{item_id}/restock` `{units}`.
+- `PUT /api/inventory/items/{item_id}` `{quantity, low_stock_threshold?}` — set outright (`quantity: 0` is the stock-out path).
+- `POST /api/inventory/simulate-sales` — demo "live orders": 1–3 units at 2–3 in-stock lines (low lines picked more often).
+- `POST /api/inventory/reset` — back to the demo quantities; clears the activity log.
+
+Mutations return the updated item plus `alerts` and `telegram: {sent, linked, bot_running, skipped}`. A line going from >0 to 0 creates an `inventory_out` alert and pushes it **immediately** to the product's linked Telegram chats (only chats that unticked "inventory_out" are skipped). Stock-outs deliberately ignore quiet hours and the Telegram channel switch, and are not re-sent later by the deferred-delivery job. Crossing the low-stock threshold downward creates a lower-priority `inventory_low` alert that follows the normal channel/quiet-hours rules.
+
 Chats without a product focus are grounded in the product the message names (else the one with the most stock-outs), plus plan credit usage.
 
 ## Current plan limits
@@ -92,7 +105,9 @@ All TinyFish calls live in `app/services/tinyfish/tinyfish_client.py`, built on 
 
 Plain Browser API sessions (Playwright over CDP, Indian proxy) are also implemented and selectable per app, but in testing Blinkit returned 403s, Zepto rendered blank, and Instamart required phone login once a location was set. The agent goal is strictly read-only: it never clicks ADD, never opens the cart or checkout, and never logs in. Each result stores the agent's last screenshot as proof (`GET /v1/runs/{id}/steps/{step}/screenshot`). The Agent API only accepts proxy countries US/GB/CA/DE/FR/JP/AU, so agent runs use TinyFish's default network.
 
-**Cost guard.** Live runs needing more than `TINYFISH_LIVE_MAX_JOBS_PER_RUN` checks (default 6) are refused with `422 live_job_limit`, including scheduled runs, so the scheduler can never start hundreds of paid agent runs.
+**Cost guard.** A live run never starts more than `TINYFISH_LIVE_MAX_JOBS_PER_RUN` agent checks (default 6), including scheduled runs. Instead of refusing a bigger selection, the run is trimmed: the seller's own listing first, then rivals in the order they were added, each over pincodes then platforms. The next runs pick up where the last one stopped, so every pincode/rival pair gets covered over a few runs. Amazon/Flipkart page reads are free and always run. `POST /products/{id}/runs` and `GET .../runs/estimate` report the waiting checks as `deferred_jobs`, and the UI says so.
+
+**Competitor discovery.** With a TinyFish key, `POST /products/{id}/competitors/discover` runs one TinyFish Search per marketplace (Blinkit, Zepto, Instamart on swiggy.com, Amazon, Flipkart) in parallel and returns real product pages, interleaved across platforms. Search, category and combo pages, accessories (cases, covers…) and the seller's own brand are filtered out. Without a key it falls back to clearly labelled demo suggestions.
 
 **Errors.** Bad key (401/403) and an empty wallet (402) fail fast and are logged as errors. Rate limits (429), 5xx and network errors are retried by the SDK, then once more by the runner. Blocked pages and unserviceable pincodes fail without a retry. Every failure keeps its agent trace for replay.
 

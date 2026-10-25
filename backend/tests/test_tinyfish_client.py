@@ -111,18 +111,18 @@ async def test_check_pincode_rejects_bad_input() -> None:
 
 
 @pytest.mark.asyncio
-async def test_live_runs_over_the_job_limit_are_refused(monkeypatch) -> None:
-    from fastapi import HTTPException
+async def test_live_runs_over_the_job_limit_are_trimmed(monkeypatch) -> None:
     from sqlalchemy import select
 
     from app.config import get_settings
     from app.db import SessionLocal
     from app.models.product import Product, ProductPincode
-    from app.services.runner import create_run
+    from app.services.runner import plan_jobs
 
     settings = get_settings()
     monkeypatch.setattr(settings, "tinyfish_api_key", "test-key")
     monkeypatch.setattr(settings, "mock_mode", False)
+    monkeypatch.setattr(settings, "tinyfish_live_platforms", "blinkit,zepto,instamart,amazon,flipkart")
     monkeypatch.setattr(settings, "tinyfish_live_max_jobs_per_run", 1)
     async with SessionLocal() as session:
         product = (await session.scalars(select(Product).where(Product.paused.is_(False)))).first()
@@ -131,15 +131,30 @@ async def test_live_runs_over_the_job_limit_are_refused(monkeypatch) -> None:
                 select(ProductPincode).where(ProductPincode.product_id == product.id)
             )
         ).all()
-        with pytest.raises(HTTPException) as caught:
-            await create_run(
-                session,
-                product,
-                trigger="manual",
-                platforms=sorted({pair.platform for pair in pairs}),
-                pincodes=sorted({pair.pincode for pair in pairs}),
-            )
-    assert caught.value.detail["code"] == "live_job_limit"
+        plan = await plan_jobs(
+            session,
+            product,
+            sorted({pair.platform for pair in pairs}),
+            sorted({pair.pincode for pair in pairs}),
+        )
+    assert plan.agent_jobs == 1 and plan.deferred_jobs > 0
+
+
+def test_trimmed_runs_start_with_the_seller_then_rotate() -> None:
+    from app.services.runner import Job, fit_live_limit
+
+    jobs = [
+        Job(rival, platform, pin, "q", "u")
+        for rival in (None, "r1")
+        for platform in ("zepto", "amazon")
+        for pin in ("110001", "110017")
+    ]
+    first, waiting = fit_live_limit(jobs, 2)
+    agent = [(j.competitor_id, j.pincode) for j in first if j.platform == "zepto"]
+    assert agent == [(None, "110001"), (None, "110017")] and waiting == 2
+    assert sum(j.platform == "amazon" for j in first) == 4  # free page reads always run
+    second, _ = fit_live_limit(jobs, 2, offset=2)
+    assert [(j.competitor_id, j.pincode) for j in second if j.platform == "zepto"] == [("r1", "110001"), ("r1", "110017")]
 
 
 def test_agent_goal_is_read_only_and_names_the_pincode() -> None:

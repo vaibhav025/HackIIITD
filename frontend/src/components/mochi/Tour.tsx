@@ -132,7 +132,6 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
   const pushed = useRef<string | null>(null);
   const lastPath = useRef(pathname);
   const misses = useRef<{ chapter: string; n: number }>({ chapter: "", n: 0 });
-  const dimSaid = useRef(-1);
   const exited = useRef(false);
   /** Set when a route change already moved the tour along, so the step runner skips its stale-index pass. */
   const advanced = useRef(false);
@@ -223,6 +222,9 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
       advanced.current = false;
       return;
     }
+    // The user navigated away and the route effect (same commit, runs first) ended the tour: never
+    // push them back to the tour's page.
+    if (exited.current) return;
     if (modal) return;
     const token = { cancelled: false };
     let slowT = 0;
@@ -638,13 +640,6 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
   };
   const back = index > 0 ? () => go(index - 1, -1) : undefined;
 
-  const onDimClick = () => {
-    setHop((h) => h + 1);
-    if (dimSaid.current === index) return;
-    dimSaid.current = index;
-    setOverride({ text: TOUR_LINES.dimClick, mood: "surprised" });
-  };
-
   /* ------------------------------------------------------------- footer */
   const visibleSteps = steps.filter((s) => !(mobile && s.desktopOnly));
   const overall = Math.max(1, visibleSteps.indexOf(step) + 1);
@@ -712,7 +707,9 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
     ? { position: "fixed", left: MOBILE_PERCH_X, bottom: boxH - 14, width: S, height: S, zIndex: STAGE_Z + 1, pointerEvents: "none", transform: "none" }
     : { position: "fixed", left: 0, top: 0, width: S, height: S, zIndex: STAGE_Z + 1, pointerEvents: "none", willChange: "transform" };
 
-  const blocker: CSSProperties = { position: "fixed", left: 0, top: 0, width: 0, height: 0, pointerEvents: "auto", background: "transparent" };
+  // The dim is visual only: clicks pass through, so the app never feels frozen during a tour.
+  // Following a link elsewhere ends the tour via the route effect above.
+  const blocker: CSSProperties = { position: "fixed", left: 0, top: 0, width: 0, height: 0, pointerEvents: "none", background: "transparent" };
 
   return (
     <div className="m2" data-m2="tour" style={{ position: "fixed", inset: 0, zIndex: SPOT_Z, pointerEvents: "none" }}>
@@ -739,7 +736,7 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
         aria-hidden="true"
         style={{ position: "fixed", left: 0, top: 0, width: 0, height: 0, zIndex: SPOT_Z, pointerEvents: "none", display: "none", borderRadius: 12, outline: "3px dashed #FAC775", outlineOffset: 0 }}
       />
-      {/* Click blockers around the hole; the hole itself lets clicks through to the real element. */}
+      {/* Panels around the hole (positioned with the spotlight); they don't block clicks. */}
       {!modal &&
         [0, 1, 2, 3].map((i) => (
           <div
@@ -749,7 +746,6 @@ export default function Tour({ kind, steps, startIndex, initialCtx, reduced, mob
             }}
             aria-hidden="true"
             style={{ ...blocker, zIndex: SPOT_Z }}
-            onClick={onDimClick}
           />
         ))}
 

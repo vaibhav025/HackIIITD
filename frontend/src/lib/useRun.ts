@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { api, ApiError, errorMessage, streamUrl } from "./api";
 import { mochiEmit } from "./mochi-bus";
-import { MOCK_MODE, mockRunEvents } from "./mock";
+import { toast } from "./toast";
 import type {
   AgentJob,
   AgentStep,
@@ -504,21 +504,7 @@ export function useRun(productId: string | null, onUpdate?: () => void) {
         s.pollTimer = setTimeout(poll, 0);
       };
 
-      // Demo mode: replay the mock run's event stream on timers instead of opening an EventSource.
-      const openMock = () => {
-        dispatch({ kind: "connection", connection: "live" });
-        for (const { at, event } of mockRunEvents(runId)) {
-          later(() => {
-            s.lastActivity = Date.now();
-            dispatch({ kind: "event", event, seq: null });
-            if (event.type === "result") refreshSoon();
-            if (event.type === "run_done") finish();
-          }, Math.max(0, at - Date.now()));
-        }
-      };
-
       const open = async () => {
-        if (MOCK_MODE) return openMock();
         let url: string;
         try {
           url = await streamUrl(runId, { lastEventId: runRef.current?.lastSeq ? String(runRef.current.lastSeq) : null });
@@ -623,10 +609,14 @@ export function useRun(productId: string | null, onUpdate?: () => void) {
       setStarting(true);
       setStartError(null);
       try {
-        const { run_id, total_jobs, estimated_credits } = await api<{ run_id: string; total_jobs?: number; estimated_credits: number }>(
-          `/products/${productId}/runs`,
-          { method: "POST", json: body ?? {} },
-        );
+        const { run_id, total_jobs, estimated_credits, deferred_jobs } = await api<{
+          run_id: string;
+          total_jobs?: number;
+          estimated_credits: number;
+          deferred_jobs?: number;
+        }>(`/products/${productId}/runs`, { method: "POST", json: body ?? {} });
+        // Live runs are capped per run; the rest rotate into the following checks.
+        if (deferred_jobs) toast.info(`Checking ${total_jobs ?? 0} now. ${deferred_jobs} more live checks run in the next checks to save credits.`);
         attach(run_id, total_jobs ?? estimated_credits ?? 0);
         startedHere.current.add(run_id);
         mochiEmit({ type: "run", phase: "start", runId: run_id, total: total_jobs ?? estimated_credits ?? 0 });

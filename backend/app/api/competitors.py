@@ -16,6 +16,7 @@ from ..schemas.products import (
     CompetitorDiscoveryRequest,
     CompetitorDiscoveryResponse,
     CompetitorResponse,
+    CompetitorSuggestion,
 )
 from ..services.competitor_discovery import discover_competitors
 from ..services.plans import competitor_limit
@@ -59,14 +60,15 @@ def same_competitor(
     return _norm_name(name) == _norm_name(other.name)
 
 
-def as_suggestion(raw: dict) -> CompetitorCreate | None:
+def as_suggestion(raw: dict) -> CompetitorSuggestion | None:
     """Fit a discovery hit into the competitor schema, or drop it."""
     try:
-        return CompetitorCreate(
+        return CompetitorSuggestion(
             name=str(raw.get("name") or "")[:NAME_LIMIT],
             platform=raw.get("platform"),
             url=raw.get("url"),
             search_query=(str(raw["search_query"])[:QUERY_LIMIT] if raw.get("search_query") else None),
+            price=raw.get("price"),
         )
     except ValidationError:
         return None
@@ -181,7 +183,7 @@ async def discover(
         ).all()
     )
     own_name = _norm_name(product.name)
-    suggestions: list[CompetitorCreate] = []
+    suggestions: list[CompetitorSuggestion] = []
     for item in raw:
         suggestion = as_suggestion(item)
         if suggestion is None or _norm_name(suggestion.name) == own_name:

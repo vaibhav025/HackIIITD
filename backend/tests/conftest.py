@@ -24,6 +24,8 @@ for _key in (
     "SUPABASE_URL",
     "SUPABASE_SERVICE_KEY",
     "SUPABASE_JWT_SECRET",
+    "SUPABASE_JWKS_URL",
+    "FRONTEND_ORIGINS",
 ):
     os.environ[_key] = ""
 

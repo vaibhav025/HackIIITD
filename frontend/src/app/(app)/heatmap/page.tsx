@@ -53,6 +53,8 @@ interface RunEstimate {
   jobs: number;
   credits: number;
   platforms: string[];
+  // Live checks over the per-run cap; they rotate into the next runs.
+  deferred_jobs?: number;
   skipped_platforms: { platform: string; reason: string }[];
   remaining_credits: number | null;
 }
@@ -547,6 +549,7 @@ function ProductHeatmap({
             <span className="text-[12px] font-semibold text-ink/75">
               {est.jobs} check{est.jobs === 1 ? "" : "s"}
               {est.skipped_platforms.length ? ` · skips ${est.skipped_platforms.map((s) => platformLabel(s.platform)).join(", ")}` : ""}
+              {est.deferred_jobs ? ` · ${est.deferred_jobs} more in the next checks` : ""}
               {est.remaining_credits != null ? ` · ${est.remaining_credits} credits left today` : ""}
             </span>
           )}

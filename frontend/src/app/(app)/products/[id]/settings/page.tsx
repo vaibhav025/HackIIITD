@@ -603,7 +603,7 @@ export default function ProductSettingsPage({ params }: { params: Promise<{ id: 
               </form>
               {suggestions.length > 0 && (
                 <div className="pt-5">
-                  <p className="eyebrow text-slate mb-1">{suggestionSource === "demo" ? "Demo suggestions" : "Suggestions"} · tap to track</p>
+                  <p className="eyebrow text-slate mb-1">{suggestionSource === "demo" ? "Demo suggestions" : "Live suggestions"} · tap to track</p>
                   <p className="text-[14px] leading-5 text-ink/80 mb-3">
                     {suggestionSource === "demo"
                       ? "Live rival search isn't available, so these are generic placeholders: each one tracks the top listing for your product category (your brand removed) on that platform."

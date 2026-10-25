@@ -80,6 +80,7 @@ from .marketplace import (
     listing_urls,
 )
 from .pack import pack_label, same_variant
+from .search_hits import SEARCH_DOMAINS, interleave, listings_from_results
 
 if TYPE_CHECKING:
     from playwright.async_api import Locator, Page
@@ -1155,9 +1156,28 @@ class TinyFishLiveClient:
             logger.warning("could not save debug capture for %s/%s", platform, pincode)
 
     async def search(self, query: str) -> list[SearchHit]:
-        raise TinyFishError(
-            "TinyFish Search is not wired up yet (step 2a)", retryable=False
-        )
+        """Competitor listings for ``query``: one TinyFish web search per marketplace, in parallel."""
+
+        async def one(platform: str, client: AsyncTinyFish) -> list[SearchHit]:
+            try:
+                found = await client.search.query(
+                    query,
+                    location="IN",
+                    language="en",
+                    include_domains=SEARCH_DOMAINS[platform],
+                    purpose="Find product pages of competing products sold on Indian grocery and marketplace sites",
+                )
+            except Exception as exc:  # noqa: BLE001 - one marketplace failing must not sink the rest
+                logger.warning("TinyFish Search failed for %s: %s", platform, exc)
+                return []
+            return listings_from_results(platform, found.results, query)
+
+        try:
+            async with self._sdk(timeout=SEARCH_TIMEOUT_SECONDS) as client:
+                groups = await asyncio.gather(*(one(p, client) for p in SEARCH_DOMAINS))
+        except Exception as exc:
+            raise map_sdk_error(exc) from exc
+        return interleave(list(groups))
 
     async def fetch(self, url: str) -> FetchResult:
         raise TinyFishError(

@@ -28,7 +28,7 @@ import { useSyncExternalStore } from "react";
  * Base voice: a little girl (about five) — pitch near the top of the range on a female voice,
  * a touch quick and bouncy. Web Speech ranges: pitch 0–2, rate 0.1–10.
  */
-export const VOICE_TUNING = { pitch: 1.95, rate: 1.12, volume: 1 };
+export const VOICE_TUNING = { pitch: 1.7, rate: 1.05, volume: 1 };
 
 /** Per-mood nudges added to VOICE_TUNING (volume is a multiplier). */
 const MOOD_TUNING: Record<string, { pitch?: number; rate?: number; volume?: number }> = {

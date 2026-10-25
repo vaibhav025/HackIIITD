@@ -223,6 +223,12 @@ class CompetitorDiscoveryRequest(BaseModel):
     query: OptionalQuery = None
 
 
+class CompetitorSuggestion(CompetitorCreate):
+    """A discovered rival listing. ``price`` is what the search snippet showed (display only)."""
+
+    price: float | None = None
+
+
 class CompetitorDiscoveryResponse(BaseModel):
-    suggestions: list[CompetitorCreate]
+    suggestions: list[CompetitorSuggestion]
     source: str

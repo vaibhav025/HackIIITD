@@ -19,6 +19,8 @@ const ALERT_ICON: Record<string, string> = {
   price_change_pct: "alert-trend-down",
   price_gap_pct: "alert-trend-down",
   oos_any: "alert-box",
+  inventory_out: "alert-box",
+  inventory_low: "alert-box",
 };
 
 const noop = () => () => {};

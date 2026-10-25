@@ -253,6 +253,33 @@ export const MOCHI_TIPS: MochiTip[] = [
     text: "Pick a run on the left to watch it. Live runs stream here, and finished runs replay step by step.",
   },
 
+  /* -------------------------------------------------------------- Inventory */
+  {
+    id: "inv-head",
+    route: /^\/inventory\/?$/,
+    section: '[data-mochi="inv-head"]',
+    text: "This is your stock in every warehouse. Try 'Set to 0' — I'll ping you here and on Telegram the moment something runs out!",
+  },
+  {
+    id: "inv-products",
+    route: /^\/inventory\/?$/,
+    section: '[data-mochi="inv-products"]',
+    text: "Each row is one warehouse or dark store. “−1 sold” and “+ Restock” move the stock; tap the number to type an exact count.",
+  },
+  {
+    id: "inv-simulate",
+    route: /^\/inventory\/?$/,
+    section: '[data-mochi="inv-head"]',
+    point: '[data-mochi="inv-simulate"]',
+    text: "Switch on “Simulate live orders” and stock drains by itself, like orders coming in. Reset demo stock puts it all back.",
+  },
+  {
+    id: "inv-activity",
+    route: /^\/inventory\/?$/,
+    section: '[data-mochi="inv-activity"]',
+    text: "Every sale, restock and stock change lands in Recent activity.",
+  },
+
   /* ----------------------------------------------------------------- Alerts */
   {
     id: "alerts-head",
